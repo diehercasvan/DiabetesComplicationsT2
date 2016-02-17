@@ -28,12 +28,13 @@
             android:text="Dolor neuropático diabético"
             android:textColor="@color/colorTextTitle"
             android:textStyle="bold"
-            android:textSize="20dip"
+            android:textSize="20sp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:gravity="center"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="10dp"
+            android:id="@+id/textTitleDialog" />
 
     </RelativeLayout>
 
@@ -66,7 +67,7 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:id="@+id/imageView3"
+                android:id="@+id/imgSection"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/one_guide"
                 android:layout_margin="5dp" />

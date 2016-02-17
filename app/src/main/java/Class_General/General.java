@@ -5,6 +5,7 @@ import android.content.Context;
 
 import java.io.File;
 
+import models.ModelDialog;
 import models.ModelFragments;
 
 /**
@@ -22,6 +23,11 @@ public class General {
     public static String sFIleWebView;
     public static int iD_Layout[];
 
+    public static String[] slistView;
+    public static String  sTitleDialog;
+    public static int  iDiImage;
+    public static String sRouteDownload;
+
     public static void LoadFragmentSlidePage(ModelFragments modelFragments) {
 
         iD_SrcImage = modelFragments.getiSrcImage();//They are the id image
@@ -32,6 +38,17 @@ public class General {
         iD_Layout = modelFragments.getiD_Layout();//They are the id layout
 
     }
+
+    public static void LoadFragmentDialog(ModelDialog modelDialog) {
+
+        slistView = modelDialog.getSlistView();//They are the id image
+        sTitleDialog = modelDialog.getsTitleDialog();//Are the titles of the page
+        iDiImage = modelDialog.getiDiImage();//Ids are  images       sTitleImages = modelDialog.getSlistView();//Are the titles of the images
+        sRouteDownload = modelDialog.getsRouteDownload();//Are the uri of the page web
+
+
+    }
+
     public static void deleteCache(Context context) {
         try {
             File dir = context.getCacheDir();

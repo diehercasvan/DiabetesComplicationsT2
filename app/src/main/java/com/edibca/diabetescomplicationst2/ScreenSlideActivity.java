@@ -13,15 +13,17 @@ import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 import Class_General.General;
+import Interfaces.IntMenuSelector;
 import fragment.FragmentMenuDialog;
 import fragment.FragmentSlidePage;
+import models.ModelDialog;
 import models.ModelFragments;
 
 /**
  * Created by DIEGO CASALLAS  on 12/02/2016.
  * Management Class displaced fragments
  */
-public class ScreenSlideActivity extends FragmentActivity {
+public class ScreenSlideActivity extends FragmentActivity implements IntMenuSelector {
 /**
  * The number of pages (wizard steps) to show in this demo.
  */
@@ -32,6 +34,7 @@ public class ScreenSlideActivity extends FragmentActivity {
      */
     private ViewPager viewPager;
     private FragmentMenuDialog fragmentMenuDialog;
+    private ModelDialog modelDialog;
     /**
      * The pager adapter, which provides the pages to the view pager widget.
      */
@@ -70,7 +73,6 @@ public class ScreenSlideActivity extends FragmentActivity {
         return true;
     }
 
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -95,6 +97,12 @@ public class ScreenSlideActivity extends FragmentActivity {
                 viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
                 return true;
             case R.id.search:
+                modelDialog=new ModelDialog();
+                modelDialog.setiDiImage(R.drawable.one_guide);
+                modelDialog.setSlistView(getResources().getStringArray(R.array.sec_1_menu));
+                modelDialog.setsRouteDownload("");
+                modelDialog.setsTitleDialog(this.getTitle().toString());
+                General.LoadFragmentDialog(modelDialog);
 
                 FragmentTransaction  fragmentTransaction=getFragmentManager().beginTransaction();
                 fragmentMenuDialog = new FragmentMenuDialog().newInstance();
@@ -105,6 +113,12 @@ public class ScreenSlideActivity extends FragmentActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void SelectionMenuItem(int iSelection) {
+        viewPager.setCurrentItem(iSelection);
+    }
+
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
 
         public ScreenSlidePagerAdapter(FragmentManager fm) {
