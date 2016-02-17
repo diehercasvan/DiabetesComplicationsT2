@@ -22,7 +22,7 @@ import models.ModelFragments;
  * Created by DIEGO CASALLAS  on 12/02/2016.
  * Management Class displaced fragments
  */
-public class ScreenSlideActivitythree extends FragmentActivity {
+public class ScreenSlideActivityThree extends FragmentActivity {
 /**
  * The number of pages (wizard steps) to show in this demo.
  */
@@ -116,16 +116,13 @@ public class ScreenSlideActivitythree extends FragmentActivity {
         }
         public ModelFragments  loadData(){
             int[] iSrcImages=new int[10];
-            iSrcImages[0]=R.drawable.sec2_1_1;
-            iSrcImages[1]=R.drawable.sec2_2_2;
-            iSrcImages[2]=R.drawable.sec2_3_3;
-            iSrcImages[3]=R.drawable.sec2_4_1;
-            iSrcImages[4]=R.drawable.sec2_4_2;
-            iSrcImages[5]=R.drawable.sec2_4_3;
-            iSrcImages[6]=R.drawable.sec2_5_1;
-            iSrcImages[7]=R.drawable.sec2_6_1;
-            iSrcImages[8]=R.drawable.sec2_7_1;
-            iSrcImages[9]=R.drawable.sec2_7_2;
+            iSrcImages[0]=R.drawable.sec3_1_1;
+            iSrcImages[1]=R.drawable.sec3_3_1;
+            iSrcImages[2]=R.drawable.sec3_3_2;
+            iSrcImages[3]=R.drawable.sec3_4_1;
+            iSrcImages[4]=R.drawable.sec3_4_2;
+            iSrcImages[5]=R.drawable.sec3_5_1;
+            iSrcImages[6]=R.drawable.sec3_6_1;
 
             int[] iD_Layout=new int[3];
             iD_Layout[0]=R.layout.fragment_image;
@@ -133,15 +130,15 @@ public class ScreenSlideActivitythree extends FragmentActivity {
             iD_Layout[2]=R.layout.fragment_text;
 
             int [] iD_image_single=new int [1];
-            //iD_image_single[0]=R.drawable.sec1_8_1;
+            iD_image_single[0]=R.drawable.sec3_9_1;
 
 
             ModelFragments modelFragments=new ModelFragments();
             modelFragments.setiSrcImage(iD_image_single);
-            modelFragments.setsTitlePage(getResources().getStringArray(R.array.sec_2_menu));
+            modelFragments.setsTitlePage(getResources().getStringArray(R.array.sec_3_menu));
             modelFragments.setiSrcImages(iSrcImages);
-            modelFragments.setsTitleImages(getResources().getStringArray(R.array.sec_2_images));
-            modelFragments.setsFileWebViews("section_2");
+            modelFragments.setsTitleImages(getResources().getStringArray(R.array.sec_3_images));
+            modelFragments.setsFileWebViews("section_3");
             modelFragments.setiD_Layout(iD_Layout);
 
             return modelFragments;

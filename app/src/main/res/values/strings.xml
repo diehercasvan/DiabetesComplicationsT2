@@ -85,5 +85,27 @@
         <item>Cuatro</item>
     </string-array>
 
+    <string-array name="sec_3_menu">
+        <item>1.Definición de ECV</item>
+        <item>2.Clasificación de ECV</item>
+        <item>3.Epidemiología de la diabetes y ECV en el paciente diabético</item>
+        <item>4.Factores de riesgo para ECV</item>
+        <item>5.Síntomas de ECV</item>
+        <item>6.Diagnóstico  de ECV</item>
+        <item>7.Tratamiento  de ECV aguda</item>
+        <item>8.Prevención de ECV</item>
+        <item>9.Algoritmo diagnóstico en ECV isquémico</item>
+        <item>Referencias</item>
+    </string-array>
+
+    <string-array name="sec_3_images">
+        <item>Figura 1</item>
+        <item>Figura 2</item>
+        <item>Figura 3</item>
+        <item>Tabla 1</item>
+        <item>Tabla 2</item>
+        <item>Tabla 3</item>
+        <item>Tabla 4</item>
+    </string-array>
 
 </resources>

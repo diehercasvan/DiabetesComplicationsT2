@@ -77,15 +77,15 @@ public class FragmentSlidePageThree extends Fragment {
 
         switch (mPageNumber) {
             case 0:
-                rootView = (ViewGroup) inflater.inflate(General.iD_Layout[1], container, false);
+                rootView = (ViewGroup) inflater.inflate(General.iD_Layout[2], container, false);
                 loadViewMultipleImageText(mPageNumber);
                 break;
             case 1:
-                rootView = (ViewGroup) inflater.inflate(General.iD_Layout[2], container, false);
+                rootView = (ViewGroup) inflater.inflate(General.iD_Layout[1], container, false);
                 loadViewText(mPageNumber);
                 break;
             case 2:
-                rootView = (ViewGroup) inflater.inflate(General.iD_Layout[2], container, false);
+                rootView = (ViewGroup) inflater.inflate(General.iD_Layout[1], container, false);
                 loadViewText(mPageNumber);
                 break;
             case 3:
@@ -101,10 +101,18 @@ public class FragmentSlidePageThree extends Fragment {
                 loadViewMultipleImageText(mPageNumber);
                 break;
             case 6:
-                rootView = (ViewGroup) inflater.inflate(General.iD_Layout[1], container, false);
+                rootView = (ViewGroup) inflater.inflate(General.iD_Layout[2], container, false);
                 loadViewMultipleImageText(mPageNumber);
                 break;
             case 7:
+                rootView = (ViewGroup) inflater.inflate(General.iD_Layout[2], container, false);
+                loadViewText(mPageNumber);
+                break;
+            case 8:
+                rootView = (ViewGroup) inflater.inflate(General.iD_Layout[0], container, false);
+                loadViewText(mPageNumber);
+                break;
+            case 9:
                 rootView = (ViewGroup) inflater.inflate(General.iD_Layout[2], container, false);
                 loadViewText(mPageNumber);
                 break;

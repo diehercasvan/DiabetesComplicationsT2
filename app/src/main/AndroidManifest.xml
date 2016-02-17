@@ -41,6 +41,18 @@
                 android:value=".MainActivity">
             </meta-data>
         </activity>
+
+        <activity
+            android:name=".ScreenSlideActivityThree"
+            android:label="@string/sec_3"
+            android:parentActivityName=".MainActivity"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar"
+            android:uiOptions="splitActionBarWhenNarrow">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity">
+            </meta-data>
+        </activity>
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
 
