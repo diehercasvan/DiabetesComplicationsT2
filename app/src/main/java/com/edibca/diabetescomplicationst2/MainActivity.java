@@ -139,6 +139,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 intent=new Intent (this,ScreenSlideActivity.class);
             break;
             case R.id.imgTwoGuide:
+                intent=new Intent (this,ScreenSlideActivityTwo.class);
                 break;
             case R.id.imgThreeGuide:
                 break;

@@ -13,6 +13,13 @@
     <string name="lorem_ipsum"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et magna ut erat elementum cursus in quis ipsum. Nam faucibus ultrices eros, vel tempor leo semper sit amet. Duis magna quam, congue vitae interdum nec, condimentum ut lectus. Sed commodo venenatis eros a dignissim. Nunc adipiscing turpis nec magna venenatis at ultricies ipsum bibendum. Sed volutpat urna quis nisi vulputate egestas. Etiam eu dui a enim lacinia dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n\nPhasellus orci mi, eleifend nec congue id, volutpat at neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer semper velit vel leo rutrum sed fermentum elit porta.]]></string>
 
 
+    <string name="sec_1">Guía médica | DOLOR NEUROPÁTICO DIABÉTICO</string>
+    <string name="sec_2">Guía médica | ENFERMEDAD CORONARIA</string>
+    <string name="sec_3">Guía médica | ENFERMEDAD CEREBROVASCULAR (ECV)</string>
+    <string name="sec_4">Guía médica | NEFROPATÍA DIABÉTICA</string>
+    <string name="sec_5">Guía médica | PIE DIABÉTICO</string>
+    <string name="sec_6">Guía médica | RETINOPATÍA DIABÉTICA</string>
+
     <string-array name="sec_1_menu">
         <item>1.Definición</item>
         <item>2.Epidemiología</item>
@@ -41,6 +48,30 @@
         <item>Tabla 6</item>
     </string-array>
 
+    <string-array name="sec_2_menu">
+        <item>1.Epidemiología</item>
+        <item>2.Diabetes mellitus y enfermedad cardiovascular</item>
+        <item>3.Comportamiento de algunos factores de riesgo en el paciente con DM</item>
+        <item>4.Fisiopatología</item>
+        <item>5.Síntomas</item>
+        <item>6.Diagnóstico</item>
+        <item>7.Tratamiento</item>
+        <item>Referencias</item>
+    </string-array>
+
+    <string-array name="sec_2_images">
+        <item>Figura 1</item>
+        <item>Figura 2</item>
+        <item>Figura 3</item>
+        <item>Figura 4</item>
+        <item>Figura 5</item>
+        <item>Figura 6</item>
+        <item>Figura 7</item>
+        <item>Tabla 1</item>
+        <item>Tabla 2</item>
+        <item>Tabla 3</item>
+    </string-array>
+
     <string-array name="titleImage">
         <item>Uno</item>
         <item>Dos</item>
@@ -53,4 +84,6 @@
         <item>Tres</item>
         <item>Cuatro</item>
     </string-array>
+
+
 </resources>
