@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -74,7 +76,7 @@ public class FragmentSlidePageTwo extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout containing a title and body text.
-
+        General.deleteCache(General.CONTEXT);
         switch (mPageNumber) {
             case 0:
                 rootView = (ViewGroup) inflater.inflate(General.iD_Layout[1], container, false);
@@ -111,7 +113,7 @@ public class FragmentSlidePageTwo extends Fragment {
         }
 
 
-        Toast.makeText(getActivity(), "Este  es el  valor  :" + mPageNumber, Toast.LENGTH_LONG).show();
+       // Toast.makeText(getActivity(), "Este  es el  valor  :" + mPageNumber, Toast.LENGTH_LONG).show();
 
         // Set the title view to show the page number.
         // ((TextView) rootView.findViewById(android.R.id.text1)).setText(getString(R.string.title_template_step, mPageNumber + 1));
@@ -130,73 +132,86 @@ public class FragmentSlidePageTwo extends Fragment {
     public void loadView(int iTitleSelection) {
         textView = (TextView) rootView.findViewById(R.id.textTitlePage);
         textView.setText(General.sTitlePage[iTitleSelection]);
+
+
+
     }
 
     public void loadViewImage(int iSelectionPage) {
         imageView = (ImageView) rootView.findViewById(R.id.imageFragment);
-        /*
         switch (iSelectionPage) {
+
             case 7:
                 imageView.setImageResource(General.iD_SrcImage[0]);
                 break;
+
         }
-        */
+
+
     }
 
     public void loadViewText(int iSelectionPage) {
-        webView = (WebView) rootView.findViewById(R.id.webView);
-        selectionPageWeb(iSelectionPage, webView);
+
+        selectionPageWeb(iSelectionPage);
 
     }
 
     public void loadViewMultipleImageText(int iSelectionPage) {
 
-        webView = (WebView) rootView.findViewById(R.id.webView);
-        selectionPageWeb(iSelectionPage, webView);
+        selectionPageWeb(iSelectionPage);
 
         selectionImageList(iSelectionPage);
 
     }
 
     public void selectionImageList(int iselection) {
-        int iStar = 0;
-        int iEnd = 0;
+        ArrayList<Integer> iIdArrayList =new ArrayList<>();
+        ArrayList<String> sTitleArrayList=new ArrayList<>();
+
         data = new ArrayList<>();
         listView = (ListView) rootView.findViewById(R.id.listViewImages);
 
         switch (iselection) {
 
             case 0:
-                iStar = 0;
-                iEnd = 1;
-                break;
-            case 2:
-                iStar = 1;
-                iEnd = 5;
+                iIdArrayList.add(General.iSrcImage[0]);
+                sTitleArrayList.add(General.sTitleImages[0]);
+                iIdArrayList.add(General.iSrcImage[1]);
+                sTitleArrayList.add(General.sTitleImages[1]);
+                iIdArrayList.add(General.iSrcImage[2]);
+                sTitleArrayList.add(General.sTitleImages[2]);
                 break;
             case 3:
-                iStar = 5;
-                iEnd = 6;
+                iIdArrayList.add(General.iSrcImage[3]);
+                iIdArrayList.add(General.iSrcImage[4]);
+                iIdArrayList.add(General.iSrcImage[5]);
+                sTitleArrayList.add(General.sTitleImages[3]);
+                sTitleArrayList.add(General.sTitleImages[4]);
+                sTitleArrayList.add(General.sTitleImages[5]);
                 break;
             case 4:
-                iStar = 6;
-                iEnd = 8;
+                iIdArrayList.add(General.iSrcImage[6]);
+                sTitleArrayList.add(General.sTitleImages[6]);
+
                 break;
             case 5:
-                iStar = 8;
-                iEnd = 11;
+                iIdArrayList.add(General.iSrcImage[7]);
+                sTitleArrayList.add(General.sTitleImages[7]);
+
+
                 break;
             case 6:
-                iStar = 11;
-                iEnd = 12;
+                iIdArrayList.add(General.iSrcImage[8]);
+                iIdArrayList.add(General.iSrcImage[9]);
+                sTitleArrayList.add(General.sTitleImages[8]);
+                sTitleArrayList.add(General.sTitleImages[9]);
                 break;
-
         }
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < iIdArrayList.size(); i++) {
             listModels = new ListModels();
             listModels.setsName("");
-            listModels.setsDescription("two");
-            listModels.setiImgUrl(R.mipmap.ic_launcher);
+            listModels.setsDescription(sTitleArrayList.get(i));
+            listModels.setiImgUrl(iIdArrayList.get(i));
             data.add(listModels);
 
         }
@@ -205,13 +220,21 @@ public class FragmentSlidePageTwo extends Fragment {
         General.deleteCache(General.CONTEXT);
     }
 
-    public void selectionPageWeb(int iSelectionWeb, WebView webView) {
+    public void selectionPageWeb(int iSelectionWeb) {
         String sUri = General.sFIleWebView + "/sec_" + iSelectionWeb + ".html";
+
+        webView = (WebView) rootView.findViewById(R.id.webView);
+
+        webView.setWebChromeClient(new WebChromeClient());
         webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setAllowFileAccess(true);
         webView.getSettings().setUseWideViewPort(true);
         webView.getSettings().setLoadWithOverviewMode(true);
+        webView.getSettings().setPluginState(WebSettings.PluginState.ON);
         webView.loadUrl(General.URI_WEB + sUri);
 
+        //webView.removeAllViews();
+        //webView.destroy();
     }
 
 

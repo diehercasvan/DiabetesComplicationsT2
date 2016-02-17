@@ -116,7 +116,7 @@ public class FragmentSlidePage extends Fragment {
         }
 
 
-        Toast.makeText(getActivity(), "Este  es el  valor  :" + mPageNumber, Toast.LENGTH_LONG).show();
+     //   Toast.makeText(getActivity(), "Este  es el  valor  :" + mPageNumber, Toast.LENGTH_LONG).show();
 
         // Set the title view to show the page number.
         // ((TextView) rootView.findViewById(android.R.id.text1)).setText(getString(R.string.title_template_step, mPageNumber + 1));

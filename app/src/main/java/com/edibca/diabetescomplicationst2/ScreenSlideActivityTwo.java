@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import Class_General.General;
 import fragment.FragmentMenuDialog;
 import fragment.FragmentSlidePage;
+import fragment.FragmentSlidePageTwo;
 import models.ModelFragments;
 
 /**
@@ -112,7 +113,7 @@ public class ScreenSlideActivityTwo extends FragmentActivity {
 
             General.LoadFragmentSlidePage(loadData());
 
-            return FragmentSlidePage.create(position);
+            return FragmentSlidePageTwo.create(position);
         }
         public ModelFragments  loadData(){
             int[] iSrcImages=new int[10];
