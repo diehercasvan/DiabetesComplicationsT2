@@ -18,6 +18,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener {
     private ImageView[] imageViews;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +43,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
     }
+
     public void loadMenuContent() {
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -146,6 +149,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.imgSixGuide:
                 break;
         }
+
         startActivity(intent);
     }
 }

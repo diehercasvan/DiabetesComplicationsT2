@@ -3,7 +3,6 @@ package com.edibca.diabetescomplicationst2;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v13.app.FragmentStatePagerAdapter;
@@ -13,7 +12,6 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
-
 import Class_General.General;
 import fragment.FragmentMenuDialog;
 import fragment.FragmentSlidePage;
@@ -71,13 +69,18 @@ public class ScreenSlideActivity extends FragmentActivity {
         item.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
         return true;
     }
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
                 // Navigate "up" the demo structure to the launchpad activity.
                 // See http://developer.android.com/design/patterns/navigation.html for more.
+                General.deleteCache(getApplicationContext());
                 NavUtils.navigateUpTo(this, new Intent(this, MainActivity.class));
+
+                finish();
                 return true;
 
             case R.id.action_previous:
