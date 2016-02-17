@@ -3,6 +3,7 @@ package com.edibca.diabetescomplicationst2;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v13.app.FragmentStatePagerAdapter;
@@ -13,8 +14,10 @@ import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import Class_General.General;
 import fragment.FragmentMenuDialog;
 import fragment.FragmentSlidePage;
+import models.ModelFragments;
 
 /**
  * Created by DIEGO CASALLAS  on 12/02/2016.
@@ -24,7 +27,7 @@ public class ScreenSlideActivity extends FragmentActivity {
 /**
  * The number of pages (wizard steps) to show in this demo.
  */
-    private static final int NUM_PAGE=5;
+    private static final int NUM_PAGE=9;
     /**
      * The pager widget, which handles animation and allows swiping horizontally to access previous
      * and next wizard steps.
@@ -50,9 +53,9 @@ public class ScreenSlideActivity extends FragmentActivity {
                 invalidateOptionsMenu();
             }
         });
-        viewPager.setCurrentItem(4);
+       //viewPager.setCurrentItem(4);
 
-
+        General.CONTEXT=this;
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -108,7 +111,45 @@ public class ScreenSlideActivity extends FragmentActivity {
         @Override
         public Fragment getItem(int position) {
 
+            General.LoadFragmentSlidePage(loadData());
+
             return FragmentSlidePage.create(position);
+        }
+        public ModelFragments  loadData(){
+            int[] iSrcImages=new int[13];
+            iSrcImages[0]=R.drawable.sec_1_1;
+            iSrcImages[1]=R.drawable.sec_3_1;
+            iSrcImages[2]=R.drawable.sec_3_2;
+            iSrcImages[3]=R.drawable.sec_3_3;
+            iSrcImages[4]=R.drawable.sec_3_4;
+            iSrcImages[5]=R.drawable.sec_4_1;
+            iSrcImages[6]=R.drawable.sec_5_1;
+            iSrcImages[7]=R.drawable.sec_5_2;
+            iSrcImages[8]=R.drawable.sec_6_1;
+            iSrcImages[9]=R.drawable.sec_6_2;
+            iSrcImages[10]=R.drawable.sec_6_3;
+            iSrcImages[11]=R.drawable.sec_6_4;
+            iSrcImages[12]=R.drawable.sec_7_1;
+
+            int[] iD_Layout=new int[3];
+            iD_Layout[0]=R.layout.fragment_image;
+            iD_Layout[1]=R.layout.fragment_image_text;
+            iD_Layout[2]=R.layout.fragment_text;
+
+            int [] iD_image_single=new int [1];
+            iD_image_single[0]=R.drawable.sec_8_1;
+
+
+            ModelFragments modelFragments=new ModelFragments();
+            modelFragments.setiSrcImage(iD_image_single);
+            modelFragments.setsTitlePage(getResources().getStringArray(R.array.sec_1_menu));
+            modelFragments.setiSrcImages(iSrcImages);
+            modelFragments.setsTitleImages(getResources().getStringArray(R.array.sec_1_images));
+            modelFragments.setsFileWebViews("section_1");
+            modelFragments.setiD_Layout(iD_Layout);
+
+            return modelFragments;
+
         }
 
         @Override

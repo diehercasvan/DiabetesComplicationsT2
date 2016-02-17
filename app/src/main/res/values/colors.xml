@@ -7,4 +7,10 @@
     <color name="colorBackground">#FFFFFF</color>
     <color name="colorTextTitle">#5559B2</color>
     <color name="colorText">#7E82C5</color>
+
+    <color name="mask_start">#61ccc8c8</color>
+    <color name="mask_center">#00ccc8c8</color>
+    <color name="mask_end">#08ccc8c8</color>
+
+
 </resources>

@@ -1,0 +1,29 @@
+@font-face {
+    font-family: RobotoLight;
+    src: url(../font/roboto/Roboto-Light.ttf);
+}
+@font-face {
+    font-family: RobotoRegular;
+    src: url(../font/roboto/Roboto-Regular.ttf);
+}
+#subtitulo
+{
+	font-size: 22px;
+	color: #4A5BA6;
+	font-family: RobotoLight;
+	text-transform: uppercase;
+	word-break: break-all;
+}
+b,h2,h3,h4
+{
+	font-weight: bold;
+	color: #3D3669;
+}
+p,b,a,h1,h2,h3,h4,h5,h6,span,sup,ul,li,ol,body
+{
+	font-family: RobotoRegular;
+}
+h1,h2,h3,h4,h5,h6,b
+{
+	word-break: break-all;
+}
