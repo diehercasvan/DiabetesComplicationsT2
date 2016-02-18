@@ -2,6 +2,7 @@ package com.edibca.diabetescomplicationst2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -15,13 +16,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
+import Class_General.General;
+import Class_General.SvgCreate;
+
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
     private ImageView[] imageViews;
-
+    private SvgCreate svgCreate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        General general = new General(this, this, Environment.getExternalStorageDirectory().getAbsolutePath());
         setContentView(R.layout.activity_main);
         loadMenuContent();
         loadView();
@@ -29,19 +34,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void loadView() {
-        imageViews = new ImageView[6];
+
+        imageViews = new ImageView[7];
         imageViews[0] = (ImageView) findViewById(R.id.imgOneGuide);
         imageViews[1] = (ImageView) findViewById(R.id.imgTwoGuide);
         imageViews[2] = (ImageView) findViewById(R.id.imgThreeGuide);
         imageViews[3] = (ImageView) findViewById(R.id.imgFourGuide);
         imageViews[4] = (ImageView) findViewById(R.id.imgFiveGuide);
         imageViews[5] = (ImageView) findViewById(R.id.imgSixGuide);
+        imageViews[6] = (ImageView) findViewById(R.id.logo);
 
         for (int i = 0; i < imageViews.length; i++) {
 
             imageViews[i].setOnClickListener(this);
         }
-
+        svgCreate=new SvgCreate(imageViews[6], General.iIDLogo);
+        svgCreate.builderSVG();
 
     }
 
@@ -181,12 +189,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 intent = new Intent(this, ScreenSlideActivityTwo.class);
                 break;
             case 2:
+                intent = new Intent(this, ScreenSlideActivityThree.class);
                 break;
             case 3:
+                intent = new Intent(this, ScreenSlideActivityFour.class);
                 break;
             case 4:
+                intent = new Intent(this, ScreenSlideActivityFive.class);
                 break;
             case 5:
+                intent = new Intent(this, ScreenSlideActivitySix.class);
                 break;
         }
 

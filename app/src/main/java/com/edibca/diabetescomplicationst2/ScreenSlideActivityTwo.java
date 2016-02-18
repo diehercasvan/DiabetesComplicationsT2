@@ -118,7 +118,7 @@ public class ScreenSlideActivityTwo extends FragmentActivity implements IntMenuS
 
     @Override
     public void SelectionMenuItem(int iSelection) {
-        viewPager.setCurrentItem(iSelection);//New changes 
+        viewPager.setCurrentItem(iSelection);//New changes
     }
 
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {

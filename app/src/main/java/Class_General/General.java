@@ -2,9 +2,11 @@ package Class_General;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.os.Environment;
 
 import java.io.File;
-
+import com.edibca.diabetescomplicationst2.*;
 import models.ModelDialog;
 import models.ModelFragments;
 
@@ -27,6 +29,28 @@ public class General {
     public static String  sTitleDialog;
     public static int  iDiImage;
     public static String sRouteDownload;
+    public static Drawable DRAWABLE;
+
+    public static String []CONTAINER_SHARE;
+    public static String NAME_FOLDER_SHARE;
+    public static String ROUTE;
+    public static String NAME_FILE;
+
+    public static int iIDLogo;
+
+    public General(Activity activity, Context context,String route) {
+
+        this.ACTIVITY = activity;
+        this.CONTEXT = context;
+        this.NAME_FOLDER_SHARE="Brilinta";
+        this.ROUTE=route+"/"+NAME_FOLDER_SHARE+"/";
+        this.CONTAINER_SHARE= new String []{"",ACTIVITY.getResources().getString(R.string.app_name),""};;
+        this.iIDLogo=R.raw.logos;
+
+    }
+
+
+
 
     public static void LoadFragmentSlidePage(ModelFragments modelFragments) {
 

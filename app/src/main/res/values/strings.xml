@@ -5,9 +5,9 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
 
-    <string name="action_previous">Previous</string>
-    <string name="action_next">Next</string>
-    <string name="action_finish">Finish</string>
+    <string name="action_previous">Anterior</string>
+    <string name="action_next">Siguiente</string>
+    <string name="action_finish">Final</string>
     <string name="title_template_step">Step <xliff:g id="step_number">%1$d</xliff:g>: LoremIpsum</string>
     <string name ="add">Search</string>
     <string name="lorem_ipsum"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et magna ut erat elementum cursus in quis ipsum. Nam faucibus ultrices eros, vel tempor leo semper sit amet. Duis magna quam, congue vitae interdum nec, condimentum ut lectus. Sed commodo venenatis eros a dignissim. Nunc adipiscing turpis nec magna venenatis at ultricies ipsum bibendum. Sed volutpat urna quis nisi vulputate egestas. Etiam eu dui a enim lacinia dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n\nPhasellus orci mi, eleifend nec congue id, volutpat at neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer semper velit vel leo rutrum sed fermentum elit porta.]]></string>
@@ -79,18 +79,109 @@
         <item>Tabla 3</item>
     </string-array>
 
-    <string-array name="titleImage">
-        <item>Uno</item>
-        <item>Dos</item>
-        <item>Tres</item>
-        <item>Cuatro</item>
+    <string-array name="sec_3_menu">
+        <item>1.Definición de ECV</item>
+        <item>2.Clasificación de ECV</item>
+        <item>3.Epidemiología de la diabetes y ECV en el paciente diabético</item>
+        <item>4.Factores de riesgo para ECV</item>
+        <item>5.Síntomas de ECV</item>
+        <item>6.Diagnóstico  de ECV</item>
+        <item>7.Tratamiento  de ECV aguda</item>
+        <item>8.Prevención de ECV</item>
+        <item>9.Algoritmo diagnóstico en ECV isquémico</item>
+        <item>Referencias</item>
     </string-array>
-    <string-array name="uriPage">
-        <item>Uno</item>
-        <item>Dos</item>
-        <item>Tres</item>
-        <item>Cuatro</item>
+
+    <string-array name="sec_3_images">
+        <item>Figura 1</item>
+        <item>Figura 2</item>
+        <item>Figura 3</item>
+        <item>Tabla 1</item>
+        <item>Tabla 2</item>
+        <item>Tabla 3</item>
+        <item>Tabla 4</item>
+    </string-array>
+
+    <string-array name="sec_4_menu">
+        <item>1.Definición</item>
+        <item>2.Epidemiología</item>
+        <item>3.Fisiopatología</item>
+        <item>4.Cambios renales en los pacientes con ND</item>
+        <item>5.Clasificación de la ND</item>
+        <item>6.Diagnóstico y seguimiento de la ND</item>
+        <item>7.Tratamiento</item>
+        <item>8.Prevención</item>
+        <item>9.Algoritmo</item>
+        <item>Referencias</item>
+    </string-array>
+
+    <string-array name="sec_4_images">
+        <item>Figura 1</item>
+        <item>Figura 2</item>
+        <item>Figura 3</item>
+        <item>Tabla 1</item>
+        <item>Tabla 2</item>
+        <item>Tabla 3</item>
+        <item>Tabla 4</item>
+        <item>Tabla 5</item>
+    </string-array>
+
+    <string-array name="sec_5_menu">
+        <item>1.Definición</item>
+        <item>2.Epidemiología</item>
+        <item>3.Fisiopatología</item>
+        <item>4.¿Cómo y por qué se ulcera un pie?</item>
+        <item>5.Factores de riesgo para la ulceración del pie</item>
+        <item>6.Síntomas y signos del pie diabético</item>
+        <item>7.Exploración del pie en el paciente diabético</item>
+        <item>8.Evaluación de la úlcera en el paciente diabético</item>
+        <item>9.Clasificación del pie</item>
+        <item>10.Tratamiento preventivo del pie diabético</item>
+        <item>Referencias</item>
+    </string-array>
+
+    <string-array name="sec_5_images">
+        <item>Figura 1</item>
+        <item>Figura 2</item>
+        <item>Tabla 1</item>
+        <item>Figura 3</item>
+        <item>Tabla 2</item>
+        <item>Tabla 3</item>
+        <item>Figura 4</item>
+        <item>Tabla 4</item>
+        <item>Figura 5</item>
+        <item>Tabla 5</item>
+        <item>Tabla 6</item>
+        <item>Tabla 7</item>
+        <item>Tabla 8</item>
+        <item>Tabla 9</item>
+    </string-array>
+
+    <string-array name="sec_6_menu">
+        <item>1.Definición</item>
+        <item>2.Epidemiología</item>
+        <item>3.Fisiopatología</item>
+        <item>4.Factores de riesgo</item>
+        <item>5.Clasificación</item>
+        <item>6.Síntomas</item>
+        <item>7.Diagnóstico</item>
+        <item>8.Tratamiento</item>
+        <item>9.Prevención</item>
+        <item>10.Algoritmo diagnóstico y de seguimiento</item>
+        <item>Referencias</item>
+    </string-array>
+
+    <string-array name="sec_6_images">
+        <item>Figura 1</item>
+        <item>Figura 2</item>
+        <item>Figura 3</item>
+        <item>Figura 4</item>
+        <item>Tabla 1</item>
+        <item>Tabla 2</item>
+        <item>Figura 5</item>
+        <item>Tabla 3</item>
     </string-array>
 
 
+    <string name="share">Compartir ...</string>
 </resources>

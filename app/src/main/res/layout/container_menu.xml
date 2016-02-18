@@ -95,7 +95,7 @@
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="match_parent"
-                android:id="@+id/imageView4"
+                android:id="@+id/btmDownload"
                 android:src="@drawable/ic_download"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"

@@ -135,7 +135,7 @@ public class FragmentSlidePage extends Fragment {
     public void loadView(int iTitleSelection) {
         textView = (TextView) rootView.findViewById(R.id.textTitlePage);
         textView.setText(General.sTitlePage[iTitleSelection]);
-
+        //General.NAME_FILE="infoEng.pdf";
 
 
     }

@@ -1,10 +1,12 @@
 package adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,10 +16,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.edibca.diabetescomplicationst2.*;
-import com.squareup.picasso.Picasso;
-
 import java.util.List;
 
 import Class_General.General;
@@ -32,6 +31,8 @@ public class ListAdapter extends BaseAdapter {
     private int iWidthIMG, iHeightIMG;
     private View view;
     private Bitmap bitmap =null;
+
+
 
     public ListAdapter(Context context, List<ListModels> data) {
         this.context = context;
@@ -81,10 +82,27 @@ public class ListAdapter extends BaseAdapter {
             textView.setText(listModels.getsName());
             textView = (TextView) view.findViewById(R.id.description);
             textView.setText(listModels.getsDescription());
-            ImageView imageView = (ImageView) view.findViewById(R.id.img);
-            imageView.setImageBitmap(sizeImage(context.getResources(),listModels.getiImgUrl()));
+            final ImageView imageView = (ImageView) view.findViewById(R.id.img);
+            final ImageView imageScreen = new ImageView(context);
+            imageScreen.setImageResource(listModels.getiImgUrl());
 
+            imageView.setImageBitmap(sizeImage(context.getResources(), listModels.getiImgUrl()));
 
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    try{
+
+                        General.DRAWABLE=imageScreen.getDrawable();
+                        Intent intent=new Intent(context,FullScreenImage.class);
+                        context.startActivity(intent);
+                    }
+                    catch (Exception e)
+                    {
+                        Log.w("Is  error:",e.getMessage());
+                    }
+                }
+            });
 
             //imageView.setImageBitmap(getResizedBitmap(bitmap, imageView.getWidth(), imageView.getHeight()));
 

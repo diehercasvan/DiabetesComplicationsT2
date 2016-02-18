@@ -10,15 +10,14 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.edibca.diabetescomplicationst2.R;
 
 import Class_General.General;
+import Class_General.ShareFiles;
 import Interfaces.IntMenuSelector;
 
 /**
@@ -33,6 +32,8 @@ public class FragmentMenuDialog extends DialogFragment implements View.OnClickLi
     private Dialog dialog;
     private View view;
     private IntMenuSelector myCallback;
+    private ImageView btmDownload;
+
 
 
     @Override
@@ -89,8 +90,8 @@ public class FragmentMenuDialog extends DialogFragment implements View.OnClickLi
         iBtnPrevious=(ImageView)view.findViewById(R.id.imgPrevious);
         iBtnPrevious.setOnClickListener(this);
 
-
-
+        btmDownload=(ImageView)view.findViewById(R.id.btmDownload);
+        btmDownload.setOnClickListener(this);
 
     }
     @Override
@@ -103,6 +104,21 @@ public class FragmentMenuDialog extends DialogFragment implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
-        dialog.dismiss();
+
+
+        switch (v.getId())
+        {
+
+            case R.id.imgPrevious:
+                dialog.dismiss();
+                break;
+            case R.id.btmDownload:
+
+                ShareFiles shareFiles=new ShareFiles();
+                //shareFiles.share(1);
+
+                break;
+        }
+
     }
 }

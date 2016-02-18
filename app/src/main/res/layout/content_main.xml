@@ -87,13 +87,12 @@
     </LinearLayout>
     <ImageView
         android:id="@+id/logo"
-        android:layout_height="50dp"
-        android:background="@android:color/holo_red_dark"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="Logo"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/imageView2"
-        android:layout_alignStart="@+id/imageView2"
-        android:layout_marginBottom="0dp"
-        android:src="@mipmap/ic_launcher"></ImageView>
+        android:src="@mipmap/ic_launcher" />
+
 
 </RelativeLayout>

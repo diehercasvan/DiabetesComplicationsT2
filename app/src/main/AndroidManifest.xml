@@ -42,7 +42,66 @@
                 android:value=".MainActivity">
             </meta-data>
         </activity>
+        <activity
+            android:name=".FullScreenImage"
+            android:label="@string/sec_2"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:uiOptions="splitActionBarWhenNarrow">
+            <!--<meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity">
+            </meta-data>-->
+        </activity>
+        <activity
+            android:name=".ScreenSlideActivityThree"
+            android:label="@string/sec_3"
+            android:parentActivityName=".MainActivity"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar"
+            android:uiOptions="splitActionBarWhenNarrow">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity">
+            </meta-data>
+        </activity>
+
+        <activity
+            android:name=".ScreenSlideActivityFour"
+            android:label="@string/sec_4"
+            android:parentActivityName=".MainActivity"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar"
+            android:uiOptions="splitActionBarWhenNarrow">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity">
+            </meta-data>
+        </activity>
+
+        <activity
+            android:name=".ScreenSlideActivityFive"
+            android:label="@string/sec_5"
+            android:parentActivityName=".MainActivity"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar"
+            android:uiOptions="splitActionBarWhenNarrow">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity">
+            </meta-data>
+        </activity>
+
+        <activity
+            android:name=".ScreenSlideActivitySix"
+            android:label="@string/sec_6"
+            android:parentActivityName=".MainActivity"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar"
+            android:uiOptions="splitActionBarWhenNarrow">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity">
+            </meta-data>
+        </activity>
     </application>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>
