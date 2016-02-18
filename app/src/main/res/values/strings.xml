@@ -20,6 +20,13 @@
     <string name="sec_5">Guía médica | PIE DIABÉTICO</string>
     <string name="sec_6">Guía médica | RETINOPATÍA DIABÉTICA</string>
 
+    <string name="sec_menu_1">Dolor neuropático diabético</string>
+    <string name="sec_menu_2">Enfermedad coronaria</string>
+    <string name="sec_menu_3">Enfermedad cerebrovascular (ECV)</string>
+    <string name="sec_menu_4">Nefropatía diabética</string>
+    <string name="sec_menu_5">Pie diabético</string>
+    <string name="sec_menu_6">Retinopatía diabética</string>
+
     <string-array name="sec_1_menu">
         <item>1.Definición</item>
         <item>2.Epidemiología</item>

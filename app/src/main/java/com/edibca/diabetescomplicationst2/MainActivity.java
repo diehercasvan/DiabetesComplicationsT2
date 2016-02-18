@@ -16,7 +16,7 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
     private ImageView[] imageViews;
 
     @Override
@@ -27,16 +27,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         loadView();
 
     }
-    public void loadView(){
-        imageViews=new ImageView[6];
-        imageViews[0]=(ImageView)findViewById(R.id.imgOneGuide);
-        imageViews[1]=(ImageView)findViewById(R.id.imgTwoGuide);
-        imageViews[2]=(ImageView)findViewById(R.id.imgThreeGuide);
-        imageViews[3]=(ImageView)findViewById(R.id.imgFourGuide);
-        imageViews[4]=(ImageView)findViewById(R.id.imgFiveGuide);
-        imageViews[5]=(ImageView)findViewById(R.id.imgSixGuide);
 
-        for(int i=0;i<imageViews.length;i++){
+    public void loadView() {
+        imageViews = new ImageView[6];
+        imageViews[0] = (ImageView) findViewById(R.id.imgOneGuide);
+        imageViews[1] = (ImageView) findViewById(R.id.imgTwoGuide);
+        imageViews[2] = (ImageView) findViewById(R.id.imgThreeGuide);
+        imageViews[3] = (ImageView) findViewById(R.id.imgFourGuide);
+        imageViews[4] = (ImageView) findViewById(R.id.imgFiveGuide);
+        imageViews[5] = (ImageView) findViewById(R.id.imgSixGuide);
+
+        for (int i = 0; i < imageViews.length; i++) {
 
             imageViews[i].setOnClickListener(this);
         }
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-       // getMenuInflater().inflate(R.menu.main, menu);
+        // getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
@@ -108,21 +109,32 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-        int id = item.getItemId();
+        int iSelectionMenu = 0;
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        switch (item.getItemId()) {
+            case R.id.one_guide:
+                iSelectionMenu = 0;
+                break;
+            case R.id.two_guide:
+                iSelectionMenu = 1;
+                break;
+            case R.id.three_guide:
+                iSelectionMenu = 2;
+                break;
+            case R.id.four_guide:
+                iSelectionMenu = 3;
+                break;
+            case R.id.five_guide:
+                iSelectionMenu = 4;
+                break;
+            case R.id.six_guide:
+                iSelectionMenu = 5;
+                break;
 
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
 
         }
+        selectionMenu(iSelectionMenu);
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -131,23 +143,50 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public void onClick(View v) {
-        Intent intent=null;
-        switch (v.getId())
-        {
+        int iIntent = 0;
+        switch (v.getId()) {
 
             case R.id.imgOneGuide:
-                intent=new Intent (this,ScreenSlideActivity.class);
-            break;
+                iIntent = 0;
+                break;
             case R.id.imgTwoGuide:
-                intent=new Intent (this,ScreenSlideActivityTwo.class);
+                iIntent = 1;
                 break;
             case R.id.imgThreeGuide:
+                iIntent = 2;
                 break;
             case R.id.imgFourGuide:
+                iIntent = 3;
                 break;
             case R.id.imgFiveGuide:
+                iIntent = 4;
                 break;
             case R.id.imgSixGuide:
+                iIntent = 5;
+                break;
+        }
+
+        selectionMenu(iIntent);
+    }
+
+    private void selectionMenu(int iSelectionMenu) {
+
+        Intent intent = null;
+        switch (iSelectionMenu) {
+
+            case 0:
+                intent = new Intent(this, ScreenSlideActivity.class);
+                break;
+            case 1:
+                intent = new Intent(this, ScreenSlideActivityTwo.class);
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
                 break;
         }
 

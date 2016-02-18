@@ -34,13 +34,19 @@ public class FragmentMenuDialog extends DialogFragment implements View.OnClickLi
     private View view;
     private IntMenuSelector myCallback;
 
+
     @Override
-    public void onAttach(Activity activity) {
+    public  void onAttach(Activity activity){
+
         super.onAttach(activity);
-        try {
+        try
+        {
             myCallback = (IntMenuSelector) activity;
-        } catch (ClassCastException e) {
+        }
+        catch(Exception e)
+        {
             throw new ClassCastException(activity.toString()+ " must implement MyCallback");
+
         }
     }
     public FragmentMenuDialog(){
@@ -68,9 +74,10 @@ public class FragmentMenuDialog extends DialogFragment implements View.OnClickLi
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String selectedSweet = listView.getItemAtPosition(position).toString();
-                Toast.makeText(getActivity(), "Selected item: " + selectedSweet + " - " + position, Toast.LENGTH_SHORT).show();
-                myCallback.SelectionMenuItem(0);
+                //String selectedSweet = listView.getItemAtPosition(position).toString();
+
+                myCallback.SelectionMenuItem(position);
+                dialog.dismiss();
             }
         });
         textView=(TextView)view.findViewById(R.id.textTitleDialog);
@@ -96,6 +103,6 @@ public class FragmentMenuDialog extends DialogFragment implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
-
+        dialog.dismiss();
     }
 }

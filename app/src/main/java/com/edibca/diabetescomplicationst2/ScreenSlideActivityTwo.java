@@ -14,16 +14,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import Class_General.General;
+import Interfaces.IntMenuSelector;
 import fragment.FragmentMenuDialog;
 import fragment.FragmentSlidePage;
 import fragment.FragmentSlidePageTwo;
+import models.ModelDialog;
 import models.ModelFragments;
 
 /**
  * Created by DIEGO CASALLAS  on 12/02/2016.
  * Management Class displaced fragments
  */
-public class ScreenSlideActivityTwo extends FragmentActivity {
+public class ScreenSlideActivityTwo extends FragmentActivity implements IntMenuSelector {//New changes
 /**
  * The number of pages (wizard steps) to show in this demo.
  */
@@ -34,6 +36,7 @@ public class ScreenSlideActivityTwo extends FragmentActivity {
      */
     private ViewPager viewPager;
     private FragmentMenuDialog fragmentMenuDialog;
+    private ModelDialog modelDialog;//New changes
     /**
      * The pager adapter, which provides the pages to the view pager widget.
      */
@@ -54,7 +57,7 @@ public class ScreenSlideActivityTwo extends FragmentActivity {
             }
         });
        //viewPager.setCurrentItem(4);
-
+        getActionBar().setIcon(R.drawable.two_guide);//New changes
         General.CONTEXT=this;
     }
     @Override
@@ -77,6 +80,7 @@ public class ScreenSlideActivityTwo extends FragmentActivity {
             case android.R.id.home:
                 // Navigate "up" the demo structure to the launchpad activity.
                 // See http://developer.android.com/design/patterns/navigation.html for more.
+                General.deleteCache(getApplicationContext());
                 NavUtils.navigateUpTo(this, new Intent(this, MainActivity.class));
                 return true;
 
@@ -93,6 +97,15 @@ public class ScreenSlideActivityTwo extends FragmentActivity {
                 return true;
             case R.id.search:
 
+
+
+                modelDialog=new ModelDialog();
+                modelDialog.setiDiImage(R.drawable.two_guide);
+                modelDialog.setSlistView(getResources().getStringArray(R.array.sec_2_menu));
+                modelDialog.setsRouteDownload("");
+                modelDialog.setsTitleDialog(this.getTitle().toString());
+                General.LoadFragmentDialog(modelDialog);
+
                 FragmentTransaction  fragmentTransaction=getFragmentManager().beginTransaction();
                 fragmentMenuDialog = new FragmentMenuDialog().newInstance();
                 fragmentMenuDialog.show(fragmentTransaction, "Calculadora");
@@ -102,6 +115,12 @@ public class ScreenSlideActivityTwo extends FragmentActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void SelectionMenuItem(int iSelection) {
+        viewPager.setCurrentItem(iSelection);//New changes 
+    }
+
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
 
         public ScreenSlidePagerAdapter(FragmentManager fm) {

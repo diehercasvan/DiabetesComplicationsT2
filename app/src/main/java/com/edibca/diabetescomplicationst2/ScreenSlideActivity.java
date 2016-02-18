@@ -55,7 +55,7 @@ public class ScreenSlideActivity extends FragmentActivity implements IntMenuSele
             }
         });
        //viewPager.setCurrentItem(4);
-
+        getActionBar().setIcon(R.drawable.one_guide);
         General.CONTEXT=this;
     }
     @Override
@@ -117,6 +117,7 @@ public class ScreenSlideActivity extends FragmentActivity implements IntMenuSele
     @Override
     public void SelectionMenuItem(int iSelection) {
         viewPager.setCurrentItem(iSelection);
+
     }
 
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {

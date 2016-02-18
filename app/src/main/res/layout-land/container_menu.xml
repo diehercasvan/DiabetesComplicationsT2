@@ -76,7 +76,15 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/listView"
                 android:layout_weight="1"
-                android:layout_margin="10dp" />
+                android:layout_margin="10dp"
+                android:divider="#94b9f9"
+                android:dividerHeight="1dp"
+                android:foregroundGravity="left"
+
+                />
+
+
+
         </LinearLayout>
         <RelativeLayout
             android:layout_height="70dp"
