@@ -3,6 +3,8 @@ var arr = ["a","b","p","li","ul","ol","h1","h2","h3","h4","h5","h6","table"];
 var arrs = [];
 $(document).ready(function()
 {
+	$("#slide").attr('max','60');
+
 	for(var i=0;i<arr.length;i++)
 	{
 

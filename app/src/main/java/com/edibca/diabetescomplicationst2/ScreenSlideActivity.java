@@ -13,6 +13,7 @@ import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 import Class_General.General;
+import Class_General.ShareFiles;
 import Interfaces.IntMenuSelector;
 import fragment.FragmentMenuDialog;
 import fragment.FragmentSlidePage;
@@ -57,6 +58,12 @@ public class ScreenSlideActivity extends FragmentActivity implements IntMenuSele
        //viewPager.setCurrentItem(4);
         getActionBar().setIcon(R.drawable.one_guide);
         General.CONTEXT=this;
+
+        General.ACTIVITY=this;
+
+        General.NAME_FILE="DOLOR_NEUROPATICO_DIABETICO.pdf";
+
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

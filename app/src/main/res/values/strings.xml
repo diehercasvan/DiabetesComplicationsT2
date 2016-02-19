@@ -182,6 +182,17 @@
         <item>Tabla 3</item>
     </string-array>
 
+    <string name="downloadFileTitle">Descarga de contenido</string>
+    <string name="downloadFileDialog">Desea realizar la descarga</string>
+    <string name="downloadFileAccept">Aceptar</string>
+    <string name="downloadFileCancel">Cancelar</string>
+    <string name="downloadFileError">Verifique su conexión de internet</string>
+    <string name="downloadFile">Descargando  contenido. Favor espere...</string>
+    <string name="downloadError">"Error al  realizar la  descarga"</string>
+    <string name="downloadOk">"Descarga completa"</string>
+
+
 
     <string name="share">Compartir ...</string>
+    <string name="folderApp">Diabetes_Complications_T2</string>
 </resources>

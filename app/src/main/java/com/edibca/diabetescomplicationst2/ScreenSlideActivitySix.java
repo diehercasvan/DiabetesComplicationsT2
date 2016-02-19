@@ -59,6 +59,8 @@ public class ScreenSlideActivitySix extends FragmentActivity implements IntMenuS
        //viewPager.setCurrentItem(4);
         getActionBar().setIcon(R.drawable.six_guide);//New changes
         General.CONTEXT=this;
+        General.ACTIVITY=this;
+        General.NAME_FILE="RETINOPATIA_DIABETICA.pdf";
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

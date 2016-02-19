@@ -8,11 +8,11 @@
 }
 #subtitulo
 {
+	display:none;
 	font-size: 22px;
 	color: #4A5BA6;
 	font-family: RobotoLight;
 	text-transform: uppercase;
-	word-break: break-all;
 }
 b,h2,h3,h4
 {
@@ -25,5 +25,5 @@ p,b,a,h1,h2,h3,h4,h5,h6,span,sup,ul,li,ol,body
 }
 h1,h2,h3,h4,h5,h6,b
 {
-	word-break: break-all;
+
 }

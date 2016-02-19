@@ -15,6 +15,8 @@ import android.widget.Toast;
 import com.edibca.diabetescomplicationst2.*;
 import java.util.ArrayList;
 import java.util.List;
+
+import Class_General.Execute_Files;
 import Class_General.General;
 import adapters.ListAdapter;
 import models.ListModels;
@@ -136,6 +138,8 @@ public class FragmentSlidePage extends Fragment {
         textView = (TextView) rootView.findViewById(R.id.textTitlePage);
         textView.setText(General.sTitlePage[iTitleSelection]);
         //General.NAME_FILE="infoEng.pdf";
+
+
 
 
     }

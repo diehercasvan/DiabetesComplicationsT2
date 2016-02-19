@@ -59,6 +59,9 @@ public class ScreenSlideActivityFour extends FragmentActivity implements IntMenu
        //viewPager.setCurrentItem(4);
         getActionBar().setIcon(R.drawable.four_guide);//New changes
         General.CONTEXT=this;
+        General.ACTIVITY=this;
+        General.NAME_FILE="NEFROPATIA_DIABETICA.pdf";
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

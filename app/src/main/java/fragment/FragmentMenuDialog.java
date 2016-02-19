@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.edibca.diabetescomplicationst2.R;
 
+import Class_General.Execute_Files;
 import Class_General.General;
 import Class_General.ShareFiles;
 import Interfaces.IntMenuSelector;
@@ -114,8 +115,9 @@ public class FragmentMenuDialog extends DialogFragment implements View.OnClickLi
                 break;
             case R.id.btmDownload:
 
-                ShareFiles shareFiles=new ShareFiles();
-                //shareFiles.share(1);
+
+                Execute_Files execute_files= new Execute_Files();
+                execute_files.executeFiles(General.NAME_ROUTE_DOWNLOAD + General.NAME_FILE, General.NAME_FILE, true, true);
 
                 break;
         }

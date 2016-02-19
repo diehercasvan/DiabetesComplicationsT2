@@ -35,6 +35,7 @@ public class General {
     public static String NAME_FOLDER_SHARE;
     public static String ROUTE;
     public static String NAME_FILE;
+    public static  String NAME_ROUTE_DOWNLOAD;
 
     public static int iIDLogo;
 
@@ -42,11 +43,11 @@ public class General {
 
         this.ACTIVITY = activity;
         this.CONTEXT = context;
-        this.NAME_FOLDER_SHARE="Brilinta";
+        this.NAME_FOLDER_SHARE=ACTIVITY.getResources().getString(R.string.folderApp);
         this.ROUTE=route+"/"+NAME_FOLDER_SHARE+"/";
-        this.CONTAINER_SHARE= new String []{"",ACTIVITY.getResources().getString(R.string.app_name),""};;
+        this.CONTAINER_SHARE= new String []{"",ACTIVITY.getResources().getString(R.string.app_name),""};
         this.iIDLogo=R.raw.logos;
-
+        this.NAME_ROUTE_DOWNLOAD="http://creative-med.com/sanofi/Descargas_Android/Pdf/";
     }
 
 

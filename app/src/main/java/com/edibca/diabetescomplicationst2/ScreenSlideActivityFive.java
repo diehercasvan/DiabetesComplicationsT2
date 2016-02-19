@@ -59,6 +59,10 @@ public class ScreenSlideActivityFive extends FragmentActivity implements IntMenu
        //viewPager.setCurrentItem(4);
         getActionBar().setIcon(R.drawable.five_guide);//New changes
         General.CONTEXT=this;
+        General.ACTIVITY=this;
+        General.NAME_FILE="PIE_DIABETICO.pdf";
+
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -160,7 +164,7 @@ public class ScreenSlideActivityFive extends FragmentActivity implements IntMenu
             modelFragments.setsTitlePage(getResources().getStringArray(R.array.sec_5_menu));
             modelFragments.setiSrcImages(iSrcImages);
             modelFragments.setsTitleImages(getResources().getStringArray(R.array.sec_5_images));
-            modelFragments.setsFileWebViews("section_6");
+            modelFragments.setsFileWebViews("section_5");
             modelFragments.setiD_Layout(iD_Layout);
 
             return modelFragments;

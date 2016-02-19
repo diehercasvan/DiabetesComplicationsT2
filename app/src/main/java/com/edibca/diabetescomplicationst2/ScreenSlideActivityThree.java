@@ -59,6 +59,10 @@ public class ScreenSlideActivityThree extends FragmentActivity implements IntMen
        //viewPager.setCurrentItem(4);
         getActionBar().setIcon(R.drawable.three_guide);//New changes
         General.CONTEXT=this;
+        General.ACTIVITY=this;
+        General.NAME_FILE="ENFERMEDAD_CEREBROVASCULAR.pdf";
+
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
