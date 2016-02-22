@@ -222,7 +222,7 @@ public class FragmentSlidePageFour extends Fragment {
         webView.setWebChromeClient(new WebChromeClient());
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setAllowFileAccess(true);
-        webView.getSettings().setUseWideViewPort(true);
+       // webView.getSettings().setUseWideViewPort(true);
         webView.getSettings().setLoadWithOverviewMode(true);
         webView.getSettings().setPluginState(WebSettings.PluginState.ON);
         webView.loadUrl(General.URI_WEB + sUri);
