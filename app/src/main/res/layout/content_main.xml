@@ -42,42 +42,42 @@
                 android:background="@drawable/background_menu">
 
                 <ImageView
-                    android:layout_width="150dp"
+                    android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:id="@+id/imgOneGuide"
                     android:src="@drawable/one_guide"
                     android:layout_margin="5dp" />
 
                 <ImageView
-                    android:layout_width="150dp"
+                    android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:id="@+id/imgTwoGuide"
                     android:src="@drawable/two_guide"
                     android:layout_margin="5dp" />
 
                 <ImageView
-                    android:layout_width="150dp"
+                    android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:id="@+id/imgThreeGuide"
                     android:src="@drawable/three_guide"
                     android:layout_margin="5dp" />
 
                 <ImageView
-                    android:layout_width="150dp"
+                    android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:id="@+id/imgFourGuide"
                     android:src="@drawable/four_guide"
                     android:layout_margin="5dp" />
 
                 <ImageView
-                    android:layout_width="150dp"
+                    android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:id="@+id/imgFiveGuide"
                     android:src="@drawable/five_guide"
                     android:layout_margin="5dp" />
 
                 <ImageView
-                    android:layout_width="150dp"
+                    android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:id="@+id/imgSixGuide"
                     android:src="@drawable/six_guide"

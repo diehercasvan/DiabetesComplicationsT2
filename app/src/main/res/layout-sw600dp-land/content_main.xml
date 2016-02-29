@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.edibca.diabetescomplicationst2.MainActivity"
+    tools:showIn="@layout/app_bar_main"
+    android:background="@drawable/background_home">
+
+    <ImageView
+        android:layout_width="1200dp"
+        android:layout_height="800dp"
+        android:id="@+id/imageView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/background"
+        android:contentDescription="background" />
+
+    <LinearLayout
+        android:id="@+id/container_menu"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#00fbf8f8"
+        android:layout_above="@+id/logo"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignStart="@+id/logo">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:id="@+id/horizontalScrollView" >
+
+            <LinearLayout
+
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_menu">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imgOneGuide"
+                    android:src="@drawable/one_guide"
+                    android:layout_margin="5dp" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imgTwoGuide"
+                    android:src="@drawable/two_guide"
+                    android:layout_margin="5dp" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imgThreeGuide"
+                    android:src="@drawable/three_guide"
+                    android:layout_margin="5dp" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imgFourGuide"
+                    android:src="@drawable/four_guide"
+                    android:layout_margin="5dp" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imgFiveGuide"
+                    android:src="@drawable/five_guide"
+                    android:layout_margin="5dp" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imgSixGuide"
+                    android:src="@drawable/six_guide"
+                    android:layout_margin="5dp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2"
+        android:layout_marginBottom="0dp"
+        android:src="@mipmap/ic_launcher"></ImageView>
+
+</RelativeLayout>

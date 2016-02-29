@@ -33,7 +33,7 @@
             android:text="@string/dialogRestart"
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
-            android:textSize="12dip"
+            android:textSize="8dip"
             android:layout_margin="10dp"
                 android:padding="10dp" />
 
@@ -47,7 +47,7 @@
             android:text="@string/dialogTofinalize"
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
-            android:textSize="12dip"
+            android:textSize="8dip"
             android:layout_margin="10dp"
                 android:padding="10dp" />
     </LinearLayout>

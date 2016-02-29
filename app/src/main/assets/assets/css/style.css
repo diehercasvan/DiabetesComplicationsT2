@@ -53,7 +53,7 @@ td
 .fonts_i
 {
 	display: inline-block;
-	font-size: 24px;
+	font-size: 13x;
 }
 #contenedor
 {
@@ -65,6 +65,7 @@ td
 }
 #btn_opciones
 {
+	opacity:0.3;
 	display: block;
 	background-color: black;
 	border: 5px solid gray;
@@ -78,6 +79,10 @@ td
 	z-index: 2;
 	text-align: center;
 	cursor: pointer;
+}
+#btn_opciones:hover
+{
+	opacity:1;
 }
 #span_opciones
 {
@@ -94,23 +99,49 @@ td
 }
 #menu_botones
 {
-	display: none;
 	background: white;
+	border-top-right-radius :0px;
 	border: 2px solid gray;
-	border-radius: 5px;
-	width: 230px;
-	position: fixed;
-	top: 25px;
-	right: 45px;
+	display: none;
+	height: 130px;
 	padding: 5px;
-	z-index: 10;
+	position: fixed;
+	right: 90px;
+	top: 40px;
+	width: 160px;
+	z-index: 100;
+	border-right: none;
+}
+#menu_slide
+{
+	border: 2px solid gray;
+	display: none;
+	height: 130px;
+	padding: 5px;
+	position: fixed;
+	right: 40px;
+	top: 40px;
+	width: 39px;
+	z-index: 100;
+	background:white;
+}
+#slide
+{
+	vertical-align: middle;
+	position: relative;
+	top: 52px;
+	left: -60px;
+	-webkit-transform: rotate(90deg);
+	   -moz-transform: rotate(90deg);
+	    -ms-transform: rotate(90deg);
+	     -o-transform: rotate(90deg);
+	        transform: rotate(90deg);
 }
 .menu_contenedor
 {
 	display: block;
-	height: 40px;
+	height: 50px;
 	margin:0px auto;
-	border-bottom:1px solid gray; 
 	margin:5px;
 	padding: 5px;
 	text-align: center;
@@ -142,7 +173,7 @@ td
 	border-radius: 50%;
 	cursor: pointer;
 	border:1px solid gray;
-	margin: 0px 16px;
+	margin: 0px 5px;
 }
 #btn_normal
 {
@@ -163,6 +194,18 @@ td
 {
 	display: block;
 	margin:10px auto;
-	width: 90%;
+	width: 85%;
 	height: auto;
+}
+#am
+{
+    position: absolute;
+    left: 23px;
+    bottom: 3px;
+}
+#as
+{
+    position: absolute;
+    top: 3px;
+    left: 23px;
 }

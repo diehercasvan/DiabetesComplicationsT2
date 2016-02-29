@@ -14,6 +14,7 @@ $(document).ready(function()
 	$('#btn_opciones').click(function(event) 
 	{
 		$('#menu_botones').toggle();
+		$('#menu_slide').toggle();
 	});
 	$('#slide').change(function(event)
 	{
