@@ -72,8 +72,8 @@ td
 	width: 40px ;
 	height: 40px;
 	position: fixed;
-	top: 1px;
-	right: 1px;
+	top: 5px;
+	right: 5px;
 	border-radius:50%;
 	color: white;
 	z-index: 2;
@@ -103,11 +103,11 @@ td
 	border-top-right-radius :0px;
 	border: 2px solid gray;
 	display: none;
-	height: 130px;
+	height: 150px;
 	padding: 5px;
 	position: fixed;
-	right: 90px;
-	top: 40px;
+	right: 120px;
+	top: 50px;
 	width: 160px;
 	z-index: 100;
 	border-right: none;
@@ -116,21 +116,23 @@ td
 {
 	border: 2px solid gray;
 	display: none;
-	height: 130px;
-	padding: 5px;
+	height: 160px;
+	padding: 0px 10px;
 	position: fixed;
-	right: 40px;
-	top: 40px;
-	width: 39px;
+	right: 50px;
+	top: 50px;
+	width: 50px;
 	z-index: 100;
 	background:white;
+	border-left: none;
 }
 #slide
 {
 	vertical-align: middle;
 	position: relative;
-	top: 52px;
+	top: 67.5px;
 	left: -60px;
+	padding: 0px 5px;	
 	-webkit-transform: rotate(90deg);
 	   -moz-transform: rotate(90deg);
 	    -ms-transform: rotate(90deg);
@@ -141,8 +143,7 @@ td
 {
 	display: block;
 	height: 50px;
-	margin:0px auto;
-	margin:5px;
+	margin:15px auto;
 	padding: 5px;
 	text-align: center;
 }
@@ -194,18 +195,111 @@ td
 {
 	display: block;
 	margin:10px auto;
-	width: 85%;
+	width: 80%;
 	height: auto;
 }
 #am
 {
     position: absolute;
-    left: 23px;
+    left: 40px;
     bottom: 3px;
 }
 #as
 {
     position: absolute;
     top: 3px;
-    left: 23px;
+    left: 40px;
+}
+
+@media only screen and (min-device-width : 769px) and (max-device-width : 1024px) 
+{
+	#btn_opciones
+	{
+		width: 60px ;
+		height: 60px;
+	}
+	.fonts
+	{
+		line-height: 1.5;
+		font-size:40px;
+	}
+	#menu_botones
+	{
+		background: white;
+		border-top-right-radius :0px;
+		border: 2px solid gray;
+		display: none;
+		height: 180px;
+		padding: 5px;
+		position: fixed;
+		right: 140px;
+		top: 60px;
+		width: 200px;
+		z-index: 100;
+		border-right: none;
+	}
+	#menu_slide
+	{
+		border: 2px solid gray;
+		display: none;
+		height: 190px;
+		padding: 0px 10px;
+		position: fixed;
+		right: 60px;
+		top: 60px;
+		width: 70px;
+		z-index: 100;
+		background:white;
+		border-left: none;
+	}
+	#slide
+	{
+		vertical-align: middle;
+		position: relative;
+		top: 62px;
+		left: -50px;
+		padding: 20px 5px;
+		-webkit-transform: rotate(90deg);
+		   -moz-transform: rotate(90deg);
+		    -ms-transform: rotate(90deg);
+		     -o-transform: rotate(90deg);
+		        transform: rotate(90deg);
+	}
+	.menu_contenedor
+	{
+		display: block;
+		height: 50px;
+		margin:20px auto;
+		padding: 10px 5px;
+		text-align: center;
+	}
+	.botones-caja-lector
+	{
+		opacity: 1;
+		display: inline-block;
+		background: white;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		cursor: pointer;
+		border:1px solid gray;
+		margin: 0px 5px;
+	}
+	.fonts_i
+	{
+		display: inline-block;
+		font-size: 22px;
+	}
+	#am
+	{
+	    position: absolute;
+	    left: 55px;
+	    bottom: 13px;
+	}
+	#as
+	{
+	    position: absolute;
+	    top: 13px;
+	    left: 55px;
+	}
 }
