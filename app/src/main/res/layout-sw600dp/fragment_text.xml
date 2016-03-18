@@ -24,6 +24,15 @@
             android:layout_height="match_parent"
             android:id="@+id/webView"
             android:layout_gravity="center_vertical"
-        android:layout_below="@+id/textTitlePage" />
+        android:layout_below="@+id/textTitlePage"
+        android:layout_above="@+id/logo" />
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="Logo"
+        android:layout_alignParentBottom="true"
+        android:src="@mipmap/ic_launcher" />
 
 </RelativeLayout>

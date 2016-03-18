@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         imageViews[5] = (ImageView) findViewById(R.id.imgSixGuide);
         imageViews[6] = (ImageView) findViewById(R.id.logo);
 
-        for (int i = 0; i < imageViews.length; i++) {
+        for (int i = 0; i < imageViews.length-1; i++) {
 
             imageViews[i].setOnClickListener(this);
         }

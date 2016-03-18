@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Class_General.General;
+import Class_General.SvgCreate;
 import adapters.ListAdapter;
 import models.ListModels;
 
@@ -47,6 +48,7 @@ public class FragmentSlidePageFive extends Fragment {
     private ListAdapter listAdapter;
     private List<ListModels> data;
     private ListModels listModels;
+    private SvgCreate svgCreate;
 
     /**
      * Factory method for this fragment class. Constructs a new fragment for the given page number.
@@ -123,7 +125,10 @@ public class FragmentSlidePageFive extends Fragment {
                 break;
         }
 
-
+        General.deleteCache(General.CONTEXT);
+        ImageView imageViews=(ImageView)rootView.findViewById(R.id.logo);
+        svgCreate=new SvgCreate(imageViews, General.iIDLogo);
+        svgCreate.builderSVG();
        // Toast.makeText(getActivity(), "Este  es el  valor  :" + mPageNumber, Toast.LENGTH_LONG).show();
 
         // Set the title view to show the page number.

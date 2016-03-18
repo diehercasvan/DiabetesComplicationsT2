@@ -35,6 +35,13 @@ $(document).ready(function()
 		var opcion = $(this).attr('id');
 		estiloLectura(opcion);
 	});
+	$('#contenedor-texto').click(function()
+    	{
+    	if($('#menu_botones').is(":visible")){
+    		$('#menu_botones').toggle();
+       		 $('#menu_slide').toggle();
+        }
+    });
 
 
 });

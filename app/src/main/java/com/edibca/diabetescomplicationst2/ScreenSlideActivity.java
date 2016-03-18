@@ -63,7 +63,7 @@ public class ScreenSlideActivity extends FragmentActivity implements IntMenuSele
 
         General.NAME_FILE="DOLOR_NEUROPATICO_DIABETICO.pdf";
 
-
+        startDialog();
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -104,23 +104,25 @@ public class ScreenSlideActivity extends FragmentActivity implements IntMenuSele
                 viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
                 return true;
             case R.id.search:
-                modelDialog=new ModelDialog();
-                modelDialog.setiDiImage(R.drawable.one_guide);
-                modelDialog.setSlistView(getResources().getStringArray(R.array.sec_1_menu));
-                modelDialog.setsRouteDownload("");
-                modelDialog.setsTitleDialog(this.getTitle().toString());
-                General.LoadFragmentDialog(modelDialog);
-
-                FragmentTransaction  fragmentTransaction=getFragmentManager().beginTransaction();
-                fragmentMenuDialog = new FragmentMenuDialog().newInstance();
-                fragmentMenuDialog.show(fragmentTransaction, "Calculadora");
+                startDialog();
 
                 break;
         }
 
         return super.onOptionsItemSelected(item);
     }
+    public void  startDialog(){
+        modelDialog=new ModelDialog();
+        modelDialog.setiDiImage(R.drawable.one_guide);
+        modelDialog.setSlistView(getResources().getStringArray(R.array.sec_1_menu));
+        modelDialog.setsRouteDownload("");
+        modelDialog.setsTitleDialog(this.getTitle().toString());
+        General.LoadFragmentDialog(modelDialog);
 
+        FragmentTransaction  fragmentTransaction=getFragmentManager().beginTransaction();
+        fragmentMenuDialog = new FragmentMenuDialog().newInstance();
+        fragmentMenuDialog.show(fragmentTransaction, "Calculadora");
+    }
     @Override
     public void SelectionMenuItem(int iSelection) {
         viewPager.setCurrentItem(iSelection);

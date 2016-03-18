@@ -18,6 +18,7 @@ import java.util.List;
 
 import Class_General.Execute_Files;
 import Class_General.General;
+import Class_General.SvgCreate;
 import adapters.ListAdapter;
 import models.ListModels;
 
@@ -48,6 +49,7 @@ public class FragmentSlidePage extends Fragment {
     private ListAdapter listAdapter;
     private List<ListModels> data;
     private ListModels listModels;
+    private SvgCreate svgCreate;
 
     /**
      * Factory method for this fragment class. Constructs a new fragment for the given page number.
@@ -76,7 +78,7 @@ public class FragmentSlidePage extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout containing a title and body text.
-        General.deleteCache(General.CONTEXT);
+
         switch (mPageNumber) {
             case 0:
                 rootView = (ViewGroup) inflater.inflate(General.iD_Layout[1], container, false);
@@ -116,6 +118,10 @@ public class FragmentSlidePage extends Fragment {
                 break;
 
         }
+        General.deleteCache(General.CONTEXT);
+        ImageView imageViews=(ImageView)rootView.findViewById(R.id.logo);
+        svgCreate=new SvgCreate(imageViews, General.iIDLogo);
+        svgCreate.builderSVG();
 
 
      //   Toast.makeText(getActivity(), "Este  es el  valor  :" + mPageNumber, Toast.LENGTH_LONG).show();

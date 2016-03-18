@@ -61,7 +61,7 @@ public class ScreenSlideActivityThree extends FragmentActivity implements IntMen
         General.CONTEXT=this;
         General.ACTIVITY=this;
         General.NAME_FILE="ENFERMEDAD_CEREBROVASCULAR.pdf";
-
+        startDialog();
 
     }
     @Override
@@ -99,22 +99,25 @@ public class ScreenSlideActivityThree extends FragmentActivity implements IntMen
                 viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
                 return true;
             case R.id.search:
+                startDialog();
 
-                modelDialog=new ModelDialog();
-                modelDialog.setiDiImage(R.drawable.three_guide);
-                modelDialog.setSlistView(getResources().getStringArray(R.array.sec_3_menu));
-                modelDialog.setsRouteDownload("");
-                modelDialog.setsTitleDialog(this.getTitle().toString());
-                General.LoadFragmentDialog(modelDialog);
-
-                FragmentTransaction  fragmentTransaction=getFragmentManager().beginTransaction();
-                fragmentMenuDialog = new FragmentMenuDialog().newInstance();
-                fragmentMenuDialog.show(fragmentTransaction, "Calculadora");
 
                 break;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void  startDialog(){
+        modelDialog=new ModelDialog();
+        modelDialog.setiDiImage(R.drawable.three_guide);
+        modelDialog.setSlistView(getResources().getStringArray(R.array.sec_3_menu));
+        modelDialog.setsRouteDownload("");
+        modelDialog.setsTitleDialog(this.getTitle().toString());
+        General.LoadFragmentDialog(modelDialog);
+
+        FragmentTransaction  fragmentTransaction=getFragmentManager().beginTransaction();
+        fragmentMenuDialog = new FragmentMenuDialog().newInstance();
+        fragmentMenuDialog.show(fragmentTransaction, "Calculadora");
     }
 
     @Override

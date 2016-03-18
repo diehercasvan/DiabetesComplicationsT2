@@ -24,7 +24,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/textTitlePage">
+        android:layout_below="@+id/textTitlePage"
+        android:layout_above="@+id/logo">
 
         <ListView
             android:layout_width="100dp"
@@ -37,4 +38,12 @@
             android:id="@+id/webView"
             android:layout_gravity="center_vertical" />
     </LinearLayout>
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="Logo"
+        android:layout_alignParentBottom="true"
+        android:src="@mipmap/ic_launcher" />
 </RelativeLayout>
