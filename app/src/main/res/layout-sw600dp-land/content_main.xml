@@ -88,7 +88,7 @@
     <ImageView
         android:id="@+id/logo"
         android:layout_height="50dp"
-        android:background="@android:color/transparent"
+        android:background="#ffffff"
         android:layout_width="match_parent"
         android:layout_gravity="center_horizontal"
         android:layout_alignParentBottom="true"

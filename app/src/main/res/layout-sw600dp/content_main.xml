@@ -92,7 +92,8 @@
         android:layout_gravity="center_horizontal"
         android:contentDescription="Logo"
         android:layout_alignParentBottom="true"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@mipmap/ic_launcher"
+        android:background="#ffffff" />
 
 
 </RelativeLayout>

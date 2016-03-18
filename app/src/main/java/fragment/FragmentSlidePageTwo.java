@@ -1,7 +1,9 @@
 package fragment;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.edibca.diabetescomplicationst2.FullScreenImage;
 import com.edibca.diabetescomplicationst2.R;
 
 import java.util.ArrayList;
@@ -148,6 +151,19 @@ public class FragmentSlidePageTwo extends Fragment {
 
             case 7:
                 imageView.setImageResource(General.iD_SrcImage[0]);
+                imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        try {
+
+                            General.DRAWABLE = imageView.getDrawable();
+                            Intent intent = new Intent(General.CONTEXT,FullScreenImage.class);
+                            General.CONTEXT.startActivity(intent);
+                        } catch (Exception e) {
+                            Log.w("Is  error:", e.getMessage());
+                        }
+                    }
+                });
                 break;
 
         }

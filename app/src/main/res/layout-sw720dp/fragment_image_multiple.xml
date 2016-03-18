@@ -32,19 +32,23 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageFragment"
 
                 android:layout_below="@+id/textTitlePage"
-                android:src="@drawable/sec4_9_1"></ImageView>
+                android:src="@drawable/sec4_9_1"
+                android:background="#ffffff"
+                android:layout_gravity="center"></ImageView>
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/imageFragment2"
                 android:layout_below="@+id/textTitlePage"
-                android:src="@drawable/sec4_9_2" />
+                android:src="@drawable/sec4_9_2"
+                android:background="#ffffff"
+                android:layout_gravity="center" />
         </LinearLayout>
     </ScrollView>
     <ImageView
