@@ -37,6 +37,8 @@ public class General {
     public static String NAME_FILE;
     public static  String NAME_ROUTE_DOWNLOAD;
 
+    public static final String PASSWORD = "sanofi";
+
     public static int iIDLogo;
 
     public General(Activity activity, Context context,String route) {

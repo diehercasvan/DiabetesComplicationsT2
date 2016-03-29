@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,7 +16,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 import Class_General.General;
 import Class_General.SvgCreate;
 
@@ -23,6 +27,7 @@ import Class_General.SvgCreate;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
     private ImageView[] imageViews;
     private SvgCreate svgCreate;
+    private Tracker tracker;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +55,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         svgCreate=new SvgCreate(imageViews[6], General.iIDLogo);
         svgCreate.builderSVG();
-
+        try {
+            tracker = ((TrackingAnalytics) getApplication()).getTracker(TrackingAnalytics.TrackerName.APP_TRACKER);
+        } catch (Exception e) {
+            Log.e("Error", e.getMessage());
+        }
     }
 
     public void loadMenuContent() {
@@ -180,10 +189,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private void selectionMenu(int iSelectionMenu) {
 
         Intent intent = null;
+        String [] sAnalytics = getResources().getStringArray(R.array.nameSelectonAnalitycs);
         switch (iSelectionMenu) {
 
             case 0:
                 intent = new Intent(this, ScreenSlideActivity.class);
+
                 break;
             case 1:
                 intent = new Intent(this, ScreenSlideActivityTwo.class);
@@ -203,5 +214,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
         startActivity(intent);
+      loadAnalytics(sAnalytics[iSelectionMenu]);
+       // Toast.makeText(this,sAnalytics[iSelectionMenu], Toast.LENGTH_SHORT).show();
+    }
+    @Override
+    public void onStop() {
+        super.onStop();
+        //GoogleAnalytics.getInstance(this).reportActivityStop(this);
+
+        try {
+            tracker.setScreenName(null);
+        } catch (Exception e) {
+            Log.e("Error", e.getMessage());
+        }
+
+    }
+
+    public void loadAnalytics(String sScreen) {
+        tracker.setScreenName(sScreen);
+        // Send a screen view.
+        tracker.send(new HitBuilders.AppViewBuilder().build());
+
     }
 }

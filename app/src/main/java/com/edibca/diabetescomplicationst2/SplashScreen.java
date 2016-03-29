@@ -10,7 +10,10 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class SplashScreen extends Activity  implements View.OnClickListener{
@@ -19,8 +22,6 @@ public class SplashScreen extends Activity  implements View.OnClickListener{
     private RelativeLayout relativeLayout;
     private boolean bValidate = true;
     private Dialog dialog;
-
-
     public SplashScreen() {
     }
 
@@ -38,7 +39,7 @@ public class SplashScreen extends Activity  implements View.OnClickListener{
                 @Override
                 public boolean onDown(MotionEvent e) {
                     Log.i("Movimiento", "Right to Down");
-                            //loadNewActivity(1);
+                    //loadNewActivity(1);
                     return true;
                 }
 
@@ -79,7 +80,7 @@ public class SplashScreen extends Activity  implements View.OnClickListener{
 
     public void loadNewActivity(int iAnimation) {
         if (bValidate) {
-            Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+            Intent intent = new Intent(SplashScreen.this, MainLogin.class);
             startActivity(intent);
             finish();
             if (iAnimation == 0) {
@@ -98,29 +99,23 @@ public class SplashScreen extends Activity  implements View.OnClickListener{
     }
 
     public void dialog() {
-
         dialog = new Dialog(this);
-
         dialog.setContentView(R.layout.custom);
         dialog.setTitle(getResources().getString(R.string.app_name));
         dialog.setCancelable(false);
-        Button dialogOK = (Button) dialog.findViewById(R.id.btn_yes);
+        //Button dialogOK = (Button) dialog.findViewById(R.id.btn_yes);
         Button dialogCancel = (Button) dialog.findViewById(R.id.btn_no);
         // if button is clicked, close the custom dialog
-        dialogOK.setOnClickListener(new View.OnClickListener() {
+      /*  dialogOK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 reloadActivity(1);
 
-
             }
-        });
+        });*/
         dialogCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 reloadActivity(2);
             }
         });
@@ -139,7 +134,7 @@ public class SplashScreen extends Activity  implements View.OnClickListener{
         if (iData==1) {
             finish();
             onDestroy();
-            startActivity(getIntent());
+            //startActivity(getIntent());
         } else  {
             finish();
             onDestroy();
