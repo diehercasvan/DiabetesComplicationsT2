@@ -1,200 +1,202 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Complicaciones en Diabetes T2</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
 
-    <string name="action_previous">Previous</string>
-    <string name="action_next">Next</string>
-    <string name="action_finish">Finish</string>
+    <string name="action_previous">Anterior</string>
+    <string name="action_next">Siguiente</string>
+    <string name="action_finish">Final</string>
     <string name="title_template_step">Step <xliff:g id="step_number">%1$d</xliff:g>: LoremIpsum</string>
-    <string name="add">Search</string>
-    <string name="app_name">Type 2 diabetes Complications</string>
-    <string name="lorem_ipsum">![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et magna ut erat elementum cursus in quis ipsum. Nam faucibus ultrices eros, vel tempor leo semper sit amet. Duis magna quam, congue vitae interdum nec, condimentum ut lectus. Sed commodo venenatis eros a dignissim. Nunc adipiscing turpis nec magna venenatis at ultricies ipsum bibendum. Sed volutpat urna quis nisi vulputate egestas. Etiam eu dui a enim lacinia dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n\nPhasellus orci mi, eleifend nec congue id, volutpat at neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer semper velit vel leo rutrum sed fermentum elit porta.</string>
+    <string name ="add">Search</string>
+    <string name="lorem_ipsum"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et magna ut erat elementum cursus in quis ipsum. Nam faucibus ultrices eros, vel tempor leo semper sit amet. Duis magna quam, congue vitae interdum nec, condimentum ut lectus. Sed commodo venenatis eros a dignissim. Nunc adipiscing turpis nec magna venenatis at ultricies ipsum bibendum. Sed volutpat urna quis nisi vulputate egestas. Etiam eu dui a enim lacinia dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n\nPhasellus orci mi, eleifend nec congue id, volutpat at neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer semper velit vel leo rutrum sed fermentum elit porta.]]></string>
 
-    <string name="sec_menu_1">Medical guideline | PAINFUL DIABETIC NEUROPATHY</string>
-    <string name="sec_menu_2">Medical guideline | CORONARY HEART DISEASE</string>
-    <string name="sec_menu_3">Medical guideline | STROKE</string>
-    <string name="sec_menu_4">Medical guideline | DIABETIC NEPHROPATHY</string>
-    <string name="sec_menu_5">Medical guideline | DIABETIC FOOT</string>
-    <string name="sec_menu_6">Medical guideline | DIABETIC RETINOPATHY</string>
 
-    <string name="sec_1">Medical guideline | PAINFUL DIABETIC NEUROPATHY</string>
-    <string name="sec_2">Medical guideline | CORONARY HEART DISEASE</string>
-    <string name="sec_3">Medical guideline | STROKE</string>
-    <string name="sec_4">Medical guideline | DIABETIC NEPHROPATHY</string>
-    <string name="sec_5">Medical guideline | DIABETIC FOOT</string>
-    <string name="sec_6">Medical guideline | DIABETIC RETINOPATHY</string>
+    <string name="sec_1">Guía médica | DOLOR NEUROPÁTICO DIABÉTICO</string>
+    <string name="sec_2">Guía médica | ENFERMEDAD CORONARIA</string>
+    <string name="sec_3">Guía médica | ENFERMEDAD CEREBROVASCULAR (ECV)</string>
+    <string name="sec_4">Guía médica | NEFROPATÍA DIABÉTICA</string>
+    <string name="sec_5">Guía médica | PIE DIABÉTICO</string>
+    <string name="sec_6">Guía médica | RETINOPATÍA DIABÉTICA</string>
 
     <string-array name="nameSelectonAnalitycs">
-        <item name="sec_1">Medical guideline | PAINFUL DIABETIC NEUROPATHY</item>
-        <item name="sec_2">Medical guideline | CORONARY HEART DISEASE</item>
-        <item name="sec_3">Medical guideline | STROKE</item>
-        <item name="sec_4">Medical guideline | DIABETIC NEPHROPATHY</item>
-        <item name="sec_5">Medical guideline | DIABETIC FOOT</item>
-        <item name="sec_6">Medical guideline | DIABETIC RETINOPATHY</item>
+        <item>Guía médica | DOLOR NEUROPÁTICO DIABÉTICO</item>
+        <item>Guía médica | ENFERMEDAD CORONARIA</item>
+        <item>Guía médica | ENFERMEDAD CEREBROVASCULAR (ECV)</item>
+        <item>Guía médica | NEFROPATÍA DIABÉTICA</item>
+        <item>Guía médica | PIE DIABÉTICO</item>
+        <item>Guía médica | RETINOPATÍA DIABÉTICA</item>
     </string-array>
+
+    <string name="sec_menu_1">Dolor neuropático diabético</string>
+    <string name="sec_menu_2">Enfermedad coronaria</string>
+    <string name="sec_menu_3">Enfermedad cerebrovascular (ECV)</string>
+    <string name="sec_menu_4">Nefropatía diabética</string>
+    <string name="sec_menu_5">Pie diabético</string>
+    <string name="sec_menu_6">Retinopatía diabética</string>
 
     <string-array name="sec_1_menu">
-        <item>Definition</item>
-        <item>Epidemiology</item>
-        <item>Pathophysiology</item>
-        <item>Risk factors for diabetic neuropathy</item>
-        <item>Symptoms of painful diabetic neuropathy</item>
-        <item>Diagnosis</item>
-        <item>Treatment for painful diabetic neuropathy</item>
-        <item>Treatment algorithm for painful diabetic neuropathy</item>
-        <item>References</item>
-    </string-array>
-
-    <string-array name="sec_2_menu">
-        <item>Epidemiology</item>
-        <item>Diabetes Mellitus and Cardiovascular Disease</item>
-        <item>Associated risk factors in patients with DM</item>
-        <item>Pathophysiology</item>
-        <item>Symptoms</item>
-        <item>Diagnosis</item>
-        <item>Treatment</item>
-        <item>References</item>
-    </string-array>
-
-    <string-array name="sec_3_menu">
-        <item>Definition of stroke</item>
-        <item>Classification of stroke</item>
-        <item>Epidemiology of diabetes and stroke in diabetic patients</item>
-        <item>Risk factors for stroke</item>
-        <item>Symptoms of stroke</item>
-        <item>Diagnosis of stroke</item>
-        <item>Treatment for acute stroke</item>
-        <item>Prevention of stroke</item>
-        <item>Diagnostic algorithm for ischemic stroke</item>
-        <item>References</item>
-    </string-array>
-
-    <string-array name="sec_4_menu">
-        <item>Definition</item>
-        <item>Epidemiology</item>
-        <item>Pathophysiology</item>
-        <item>Kidney changes in patients with DN</item>
-        <item>Classification of DN</item>
-        <item>Diagnosis and Follow-up of DN</item>
-        <item>Treatment</item>
-        <item>Prevention</item>
-        <item>Algorithm</item>
-        <item>References</item>
-    </string-array>
-
-    <string-array name="sec_5_menu">
-        <item>Definition</item>
-        <item>Epidemiology</item>
-        <item>Pathophysiology</item>
-        <item>How and why diabetic foot occurs?</item>
-        <item>Risk factors for foot ulcers</item>
-        <item>Symptoms and signs of diabetic foot</item>
-        <item>Foot examination in diabetic patients</item>
-        <item>Ulcer assessment in diabetic patients</item>
-        <item>Classification of diabetic foot</item>
-        <item>Preventive treatment of diabetic foot</item>
-        <item>References</item>
-    </string-array>
-
-    <string-array name="sec_6_menu">
-        <item>Definition</item>
-        <item>Epidemiology</item>
-        <item>Pathophysiology</item>
-        <item>Risk factors</item>
-        <item>Classification</item>
-        <item>Symptoms</item>
-        <item>Diagnosis</item>
-        <item>Treatment</item>
-        <item>Prevention</item>
-        <item>Diagnostic and follow-up algorithm</item>
-        <item>References</item>
+        <item>1.Definición</item>
+        <item>2.Epidemiología</item>
+        <item>3.Fisiopatología</item>
+        <item>4.Factores de riesgo para la neuropatía diabética</item>
+        <item>5.Síntomas de la neuropatía diabética dolorosa</item>
+        <item>6.Diagnóstico</item>
+        <item>7.Tratamiento de la neuropatía diabética dolorosa</item>
+        <item>8.Algoritmo del tratamiento de la neuropatía diabética dolorosa</item>
+        <item>Referencias</item>
     </string-array>
 
     <string-array name="sec_1_images">
-        <item>Figure 1</item>
-        <item>Figure 2</item>
-        <item>Figure 3</item>
-        <item>Figure 4</item>
-        <item>Figure 5</item>
-        <item>Figure 6</item>
-        <item>Table 1</item>
-        <item>Table 2</item>
-        <item>Figure 7</item>
-        <item>Table 3</item>
-        <item>Table 4</item>
-        <item>Table 5</item>
-        <item>Table 6</item>
+        <item>Figura 1</item>
+        <item>Figura 2</item>
+        <item>Figura 3</item>
+        <item>Figura 4</item>
+        <item>Figura 5</item>
+        <item>Figura 6</item>
+        <item>Tabla 1</item>
+        <item>Tabla 2</item>
+        <item>Figura 7</item>
+        <item>Tabla 3</item>
+        <item>Tabla 4</item>
+        <item>Tabla 5</item>
+        <item>Tabla 6</item>
+    </string-array>
+
+    <string-array name="sec_2_menu">
+        <item>1.Epidemiología</item>
+        <item>2.Diabetes mellitus y enfermedad cardiovascular</item>
+        <item>3.Comportamiento de algunos factores de riesgo en el paciente con DM</item>
+        <item>4.Fisiopatología</item>
+        <item>5.Síntomas</item>
+        <item>6.Diagnóstico</item>
+        <item>7.Tratamiento</item>
+        <item>Referencias</item>
     </string-array>
 
     <string-array name="sec_2_images">
-        <item>Figure 1</item>
-        <item>Figure 2</item>
-        <item>Figure 3</item>
-        <item>Figure 4</item>
-        <item>Figure 5</item>
-        <item>Figure 6</item>
-        <item>Figure 7</item>
-        <item>Table 1</item>
-        <item>Table 2</item>
-        <item>Table 3</item>
+        <item>Figura 1</item>
+        <item>Figura 2</item>
+        <item>Figura 3</item>
+        <item>Figura 4</item>
+        <item>Figura 5</item>
+        <item>Figura 6</item>
+        <item>Figura 7</item>
+        <item>Tabla 1</item>
+        <item>Tabla 2</item>
+        <item>Tabla 3</item>
+    </string-array>
+
+    <string-array name="sec_3_menu">
+        <item>1.Definición de ECV</item>
+        <item>2.Clasificación de ECV</item>
+        <item>3.Epidemiología de la diabetes y ECV en el paciente diabético</item>
+        <item>4.Factores de riesgo para ECV</item>
+        <item>5.Síntomas de ECV</item>
+        <item>6.Diagnóstico  de ECV</item>
+        <item>7.Tratamiento  de ECV aguda</item>
+        <item>8.Prevención de ECV</item>
+        <item>9.Algoritmo diagnóstico en ECV isquémico</item>
+        <item>Referencias</item>
     </string-array>
 
     <string-array name="sec_3_images">
-        <item>Figure 1</item>
-        <item>Figure 2</item>
-        <item>Figure 3</item>
-        <item>Table 1</item>
-        <item>Table 2</item>
-        <item>Table 3</item>
-        <item>Table 4</item>
+        <item>Figura 1</item>
+        <item>Figura 2</item>
+        <item>Figura 3</item>
+        <item>Tabla 1</item>
+        <item>Tabla 2</item>
+        <item>Tabla 3</item>
+        <item>Tabla 4</item>
+    </string-array>
+
+    <string-array name="sec_4_menu">
+        <item>1.Definición</item>
+        <item>2.Epidemiología</item>
+        <item>3.Fisiopatología</item>
+        <item>4.Cambios renales en los pacientes con ND</item>
+        <item>5.Clasificación de la ND</item>
+        <item>6.Diagnóstico y seguimiento de la ND</item>
+        <item>7.Tratamiento</item>
+        <item>8.Prevención</item>
+        <item>9.Algoritmo</item>
+        <item>Referencias</item>
     </string-array>
 
     <string-array name="sec_4_images">
-        <item>Figure 1</item>
-        <item>Figure 2</item>
-        <item>Figure 3</item>
-        <item>Table 1</item>
-        <item>Table 2</item>
-        <item>Table 3</item>
-        <item>Table 4</item>
-        <item>Table 5</item>
+        <item>Figura 1</item>
+        <item>Figura 2</item>
+        <item>Figura 3</item>
+        <item>Tabla 1</item>
+        <item>Tabla 2</item>
+        <item>Tabla 3</item>
+        <item>Tabla 4</item>
+        <item>Tabla 5</item>
+    </string-array>
+
+    <string-array name="sec_5_menu">
+        <item>1.Definición</item>
+        <item>2.Epidemiología</item>
+        <item>3.Fisiopatología</item>
+        <item>4.¿Cómo y por qué se ulcera un pie?</item>
+        <item>5.Factores de riesgo para la ulceración del pie</item>
+        <item>6.Síntomas y signos del pie diabético</item>
+        <item>7.Exploración del pie en el paciente diabético</item>
+        <item>8.Evaluación de la úlcera en el paciente diabético</item>
+        <item>9.Clasificación del pie</item>
+        <item>10.Tratamiento preventivo del pie diabético</item>
+        <item>Referencias</item>
     </string-array>
 
     <string-array name="sec_5_images">
-        <item>Figure 1</item>
-        <item>Figure 2</item>
-        <item>Table 1</item>
-        <item>Figure 3</item>
-        <item>Table 2</item>
-        <item>Table 3</item>
-        <item>Figure 4</item>
-        <item>Table 4</item>
-        <item>Figure 5</item>
-        <item>Table 5</item>
-        <item>Table 6</item>
-        <item>Table 7</item>
-        <item>Table 8</item>
-        <item>Table 9</item>
+        <item>Figura 1</item>
+        <item>Figura 2</item>
+        <item>Tabla 1</item>
+        <item>Figura 3</item>
+        <item>Tabla 2</item>
+        <item>Tabla 3</item>
+        <item>Figura 4</item>
+        <item>Tabla 4</item>
+        <item>Figura 5</item>
+        <item>Tabla 5</item>
+        <item>Tabla 6</item>
+        <item>Tabla 7</item>
+        <item>Tabla 8</item>
+        <item>Tabla 9</item>
+    </string-array>
+
+    <string-array name="sec_6_menu">
+        <item>1.Definición</item>
+        <item>2.Epidemiología</item>
+        <item>3.Fisiopatología</item>
+        <item>4.Factores de riesgo</item>
+        <item>5.Clasificación</item>
+        <item>6.Síntomas</item>
+        <item>7.Diagnóstico</item>
+        <item>8.Tratamiento</item>
+        <item>9.Prevención</item>
+        <item>10.Algoritmo diagnóstico y de seguimiento</item>
+        <item>Referencias</item>
     </string-array>
 
     <string-array name="sec_6_images">
-        <item>Figure 1</item>
-        <item>Figure 2</item>
-        <item>Figure 3</item>
-        <item>Figure 4</item>
-        <item>Table 1</item>
-        <item>Table 2</item>
-        <item>Figure 5</item>
-        <item>Table 3</item>
+        <item>Figura 1</item>
+        <item>Figura 2</item>
+        <item>Figura 3</item>
+        <item>Figura 4</item>
+        <item>Tabla 1</item>
+        <item>Tabla 2</item>
+        <item>Figura 5</item>
+        <item>Tabla 3</item>
     </string-array>
 
-    <string name="downloadFileTitle">Download content</string>
-    <string name="downloadFileDialog">You want to download</string>
-    <string name="downloadFileAccept">Accept</string>
-    <string name="downloadFileCancel">Cancel</string>
-    <string name="downloadFileError">Check your internet connection</string>
-    <string name="downloadFile">Downloading content. Please wait ...</string>
+    <string name="downloadFileTitle">Descarga de contenido</string>
+    <string name="downloadFileDialog">Desea realizar la descarga</string>
+    <string name="downloadFileAccept">Aceptar</string>
+    <string name="downloadFileCancel">Cancelar</string>
+    <string name="downloadFileError">Verifique su conexión de internet</string>
+    <string name="downloadFile">Descargando  contenido. Favor espere...</string>
     <string name="downloadError">"Error al  realizar la  descarga"</string>
     <string name="downloadOk">"Descarga completa"</string>
 
@@ -204,11 +206,11 @@
     <string name="folderApp">Diabetes_Complications_T2</string>
 
 
-    <string name="dialogError">a drawback is presented with the application</string>
-    <string name="dialogRestart">Restart </string>
-    <string name="dialogTofinalize">Finish </string>
+    <string name="dialogError">Se presenta un inconveniente con el aplicativo</string>
+    <string name="dialogRestart">Reiniciar </string>
+    <string name="dialogTofinalize">Finalizar </string>
 
-    <string name="deposit">Login</string>
-    <string name="password">Password</string>
-    <string name="dialogErrorPassword">Incorrect password</string>
+    <string name="deposit">Ingresar</string>
+    <string name="password">Contraseña</string>
+    <string name="dialogErrorPassword">Contraseña incorrecta</string>
 </resources>
