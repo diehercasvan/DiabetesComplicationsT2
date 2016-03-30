@@ -60,7 +60,7 @@ public class ScreenSlideActivityFour extends FragmentActivity implements IntMenu
         getActionBar().setIcon(R.drawable.four_guide);//New changes
         General.CONTEXT=this;
         General.ACTIVITY=this;
-        General.NAME_FILE="NEFROPATIA_DIABETICA.pdf";
+        General.NAME_FILE="DIABETIC_KIDNEY.pdf";
         startDialog();
     }
     @Override

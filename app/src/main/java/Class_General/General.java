@@ -49,7 +49,7 @@ public class General {
         this.ROUTE=route+"/"+NAME_FOLDER_SHARE+"/";
         this.CONTAINER_SHARE= new String []{"",ACTIVITY.getResources().getString(R.string.app_name),""};
         this.iIDLogo=R.raw.logos;
-        this.NAME_ROUTE_DOWNLOAD="http://creative-med.com/sanofi/Descargas_Android/Pdf/";
+        this.NAME_ROUTE_DOWNLOAD="http://creative-med.com/sanofi/Descargas_Android/PdfEnglish/";
     }
 
 

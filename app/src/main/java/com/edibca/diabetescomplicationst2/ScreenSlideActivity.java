@@ -61,7 +61,7 @@ public class ScreenSlideActivity extends FragmentActivity implements IntMenuSele
 
         General.ACTIVITY=this;
 
-        General.NAME_FILE="DOLOR_NEUROPATICO_DIABETICO.pdf";
+        General.NAME_FILE="DIABETIC_NEUROPATHIC_PAIN.pdf";
 
         startDialog();
     }

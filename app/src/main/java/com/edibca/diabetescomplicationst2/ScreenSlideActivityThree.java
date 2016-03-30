@@ -60,7 +60,7 @@ public class ScreenSlideActivityThree extends FragmentActivity implements IntMen
         getActionBar().setIcon(R.drawable.three_guide);//New changes
         General.CONTEXT=this;
         General.ACTIVITY=this;
-        General.NAME_FILE="ENFERMEDAD_CEREBROVASCULAR.pdf";
+        General.NAME_FILE="DISEASE_STROKE.pdf";
         startDialog();
 
     }

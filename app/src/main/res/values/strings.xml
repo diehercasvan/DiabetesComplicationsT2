@@ -195,8 +195,8 @@
     <string name="downloadFileCancel">Cancel</string>
     <string name="downloadFileError">Check your internet connection</string>
     <string name="downloadFile">Downloading content. Please wait ...</string>
-    <string name="downloadError">"Error al  realizar la  descarga"</string>
-    <string name="downloadOk">"Descarga completa"</string>
+    <string name="downloadError">"Error downloading"</string>
+    <string name="downloadOk">"Download complete"</string>
 
 
 

@@ -60,7 +60,7 @@ public class ScreenSlideActivityFive extends FragmentActivity implements IntMenu
         getActionBar().setIcon(R.drawable.five_guide);//New changes
         General.CONTEXT=this;
         General.ACTIVITY=this;
-        General.NAME_FILE="PIE_DIABETICO.pdf";
+        General.NAME_FILE="DIABETIC_FOOT.pdf";
         startDialog();
 
     }

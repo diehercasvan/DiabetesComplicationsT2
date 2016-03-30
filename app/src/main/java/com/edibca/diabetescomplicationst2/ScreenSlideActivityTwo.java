@@ -60,7 +60,7 @@ public class ScreenSlideActivityTwo extends FragmentActivity implements IntMenuS
         getActionBar().setIcon(R.drawable.two_guide);//New changes
         General.CONTEXT=this;
         General.ACTIVITY=this;
-        General.NAME_FILE="ENFERMEDAD_CORONARIA.pdf";
+        General.NAME_FILE="CORONARY_HEART_DISEASE.pdf";
         startDialog();
 
     }
