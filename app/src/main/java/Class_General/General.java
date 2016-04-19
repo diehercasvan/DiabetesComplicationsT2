@@ -37,7 +37,7 @@ public class General {
     public static String NAME_FILE;
     public static  String NAME_ROUTE_DOWNLOAD;
 
-    public static final String PASSWORD = "sanofi";
+    public static final String PASSWORD = "creative";
 
     public static int iIDLogo;
 
