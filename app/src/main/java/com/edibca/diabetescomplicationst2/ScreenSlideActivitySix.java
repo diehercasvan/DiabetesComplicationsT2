@@ -16,7 +16,6 @@ import android.view.MenuItem;
 import Class_General.General;
 import Interfaces.IntMenuSelector;
 import fragment.FragmentMenuDialog;
-import fragment.FragmentSlidePageFive;
 import fragment.FragmentSlidePageSix;
 import models.ModelDialog;
 import models.ModelFragments;
@@ -61,7 +60,9 @@ public class ScreenSlideActivitySix extends FragmentActivity implements IntMenuS
         General.CONTEXT=this;
         General.ACTIVITY=this;
         General.NAME_FILE="DIABETIC_RETINOPATHY.pdf";
-        startDialog();
+        if(savedInstanceState==null){
+            startDialog();
+        }
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

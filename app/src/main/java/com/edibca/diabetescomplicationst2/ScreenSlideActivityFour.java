@@ -17,7 +17,6 @@ import Class_General.General;
 import Interfaces.IntMenuSelector;
 import fragment.FragmentMenuDialog;
 import fragment.FragmentSlidePageFour;
-import fragment.FragmentSlidePageThree;
 import models.ModelDialog;
 import models.ModelFragments;
 
@@ -61,7 +60,9 @@ public class ScreenSlideActivityFour extends FragmentActivity implements IntMenu
         General.CONTEXT=this;
         General.ACTIVITY=this;
         General.NAME_FILE="DIABETIC_KIDNEY.pdf";
-        startDialog();
+        if(savedInstanceState==null){
+            startDialog();
+        }
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

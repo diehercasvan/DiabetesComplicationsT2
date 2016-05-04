@@ -207,8 +207,22 @@
     <string name="dialogError">a drawback is presented with the application</string>
     <string name="dialogRestart">Restart </string>
     <string name="dialogTofinalize">Finish </string>
+    <string name="dialogDate">This guide is not available at this time, wait soon</string>
 
     <string name="deposit">Login</string>
     <string name="password">Password</string>
     <string name="dialogErrorPassword">Incorrect password</string>
+    <string name="dialogPositiveButton">Yes</string>
+    <string name="dialogNegativeButton">No</string>
+
+
+    <string-array name="dateDistribution">
+        <item>07/05/2016</item>
+        <item>07/07/2016</item>
+        <item>07/09/2016</item>
+        <item>07/11/2016</item>
+        <item>07/02/2017</item>
+        <item>07/04/2017</item>
+    </string-array>
+
 </resources>

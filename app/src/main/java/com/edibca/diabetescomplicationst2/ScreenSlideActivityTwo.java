@@ -16,7 +16,6 @@ import android.view.MenuItem;
 import Class_General.General;
 import Interfaces.IntMenuSelector;
 import fragment.FragmentMenuDialog;
-import fragment.FragmentSlidePage;
 import fragment.FragmentSlidePageTwo;
 import models.ModelDialog;
 import models.ModelFragments;
@@ -61,7 +60,9 @@ public class ScreenSlideActivityTwo extends FragmentActivity implements IntMenuS
         General.CONTEXT=this;
         General.ACTIVITY=this;
         General.NAME_FILE="CORONARY_HEART_DISEASE.pdf";
-        startDialog();
+        if(savedInstanceState==null){
+            startDialog();
+        }
 
     }
     @Override

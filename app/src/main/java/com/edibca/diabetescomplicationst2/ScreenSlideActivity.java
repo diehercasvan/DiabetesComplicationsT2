@@ -12,8 +12,8 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
+
 import Class_General.General;
-import Class_General.ShareFiles;
 import Interfaces.IntMenuSelector;
 import fragment.FragmentMenuDialog;
 import fragment.FragmentSlidePage;
@@ -62,8 +62,9 @@ public class ScreenSlideActivity extends FragmentActivity implements IntMenuSele
         General.ACTIVITY=this;
 
         General.NAME_FILE="DIABETIC_NEUROPATHIC_PAIN.pdf";
-
+        if(savedInstanceState==null){
         startDialog();
+        }
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

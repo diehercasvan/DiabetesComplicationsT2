@@ -1,33 +1,42 @@
 package com.edibca.diabetescomplicationst2;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.util.Log;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import Class_General.General;
 import Class_General.SvgCreate;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
     private ImageView[] imageViews;
+    private ImageView imageViewLogo;
     private SvgCreate svgCreate;
     private Tracker tracker;
+    private int iDateEnable=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,31 +44,97 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         loadMenuContent();
         loadView();
+        validateDate(0);
 
     }
 
+
     public void loadView() {
 
-        imageViews = new ImageView[7];
+        imageViews = new ImageView[6];
         imageViews[0] = (ImageView) findViewById(R.id.imgOneGuide);
         imageViews[1] = (ImageView) findViewById(R.id.imgTwoGuide);
         imageViews[2] = (ImageView) findViewById(R.id.imgThreeGuide);
         imageViews[3] = (ImageView) findViewById(R.id.imgFourGuide);
         imageViews[4] = (ImageView) findViewById(R.id.imgFiveGuide);
         imageViews[5] = (ImageView) findViewById(R.id.imgSixGuide);
-        imageViews[6] = (ImageView) findViewById(R.id.logo);
-
-        for (int i = 0; i < imageViews.length-1; i++) {
+        for (int i = 0; i < imageViews.length; i++) {
 
             imageViews[i].setOnClickListener(this);
         }
-        svgCreate=new SvgCreate(imageViews[6], General.iIDLogo);
+
+        imageViewLogo = (ImageView) findViewById(R.id.logo);
+        imageViewLogo.setOnClickListener(this);
+
+
+        svgCreate = new SvgCreate(imageViewLogo, General.iIDLogo);
         svgCreate.builderSVG();
         try {
             tracker = ((TrackingAnalytics) getApplication()).getTracker(TrackingAnalytics.TrackerName.APP_TRACKER);
         } catch (Exception e) {
             Log.e("Error", e.getMessage());
         }
+    }
+
+    /*function  for validate date DIEGO CASALLAS 04/05/2016*/
+    public boolean validateDate(int iType) {
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        String sDate = dateFormat.format(new Date());
+        boolean bvalidaSelection = false;
+        try {
+            Date nowDate = dateFormat.parse(sDate);
+            String[] sLisDate = getResources().getStringArray(R.array.dateDistribution);
+            switch (iType) {
+                case 0:
+                    int[] iLisImage = new int[sLisDate.length];
+                    iLisImage[0] = R.drawable.one_guide_disable;
+                    iLisImage[1] = R.drawable.two_guide_disable;
+                    iLisImage[2] = R.drawable.three_guide_disable;
+                    iLisImage[3] = R.drawable.four_guide_disable;
+                    iLisImage[4] = R.drawable.five_guide_disable;
+                    iLisImage[5] = R.drawable.six_guide_disable;
+
+                    for (int i = 0; i < imageViews.length; i++) {
+
+                        Date dateCompare = dateFormat.parse(sLisDate[i]);
+                        if ((nowDate.compareTo(dateCompare) != 0)|| !(nowDate.after(dateCompare))) {
+
+                            imageViews[i].setImageResource(iLisImage[i]);
+                        }
+
+                    }
+
+
+                    break;
+                case 1:
+                    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                    builder.setTitle(R.string.app_name);
+                    builder.setMessage(R.string.dialogDate);
+                    builder.setPositiveButton(R.string.dialogPositiveButton, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    });
+
+                    Date dateCompare = dateFormat.parse(sLisDate[iDateEnable]);
+                    if ((nowDate.compareTo(dateCompare) == 0) || (nowDate.after(dateCompare))) {
+                        bvalidaSelection = true;
+
+                    } else {
+                        builder.setCancelable(false);
+                        builder.show();
+                    }
+
+
+                    break;
+            }
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return bvalidaSelection;
     }
 
     public void loadMenuContent() {
@@ -150,9 +225,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         }
+
         selectionMenu(iSelectionMenu);
-
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -189,7 +263,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private void selectionMenu(int iSelectionMenu) {
 
         Intent intent = null;
-        String [] sAnalytics = getResources().getStringArray(R.array.nameSelectonAnalitycs);
+        String[] sAnalytics = getResources().getStringArray(R.array.nameSelectonAnalitycs);
         switch (iSelectionMenu) {
 
             case 0:
@@ -212,11 +286,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 intent = new Intent(this, ScreenSlideActivitySix.class);
                 break;
         }
+        iDateEnable=iSelectionMenu;
+        if (validateDate(1)) {
+            startActivity(intent);
+            loadAnalytics(sAnalytics[iSelectionMenu]);
+        }
 
-        startActivity(intent);
-      loadAnalytics(sAnalytics[iSelectionMenu]);
-       // Toast.makeText(this,sAnalytics[iSelectionMenu], Toast.LENGTH_SHORT).show();
     }
+
     @Override
     public void onStop() {
         super.onStop();

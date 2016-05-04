@@ -17,7 +17,6 @@ import Class_General.General;
 import Interfaces.IntMenuSelector;
 import fragment.FragmentMenuDialog;
 import fragment.FragmentSlidePageThree;
-import fragment.FragmentSlidePageTwo;
 import models.ModelDialog;
 import models.ModelFragments;
 
@@ -61,7 +60,9 @@ public class ScreenSlideActivityThree extends FragmentActivity implements IntMen
         General.CONTEXT=this;
         General.ACTIVITY=this;
         General.NAME_FILE="DISEASE_STROKE.pdf";
-        startDialog();
+        if(savedInstanceState==null){
+            startDialog();
+        }
 
     }
     @Override
